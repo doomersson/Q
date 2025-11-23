@@ -9,16 +9,17 @@
 
 
 @var checkbox ttw    "If using Tanki Tweaks, toggle this off"      1
-@advanced select b1 "Background" {
-    "a1:Default*": "default",
-    "b1:Linear": "linear",
-    "c1:Radial": "radial",
-    "d1:Matrix": "matrix",
-    "e1:Sparks HIGH memory usage": "sparks"
+@var select b1 'Background' {
+    'Default*': 'default',
+    'Linear': 'linear',
+    'Radial': 'radial',
+    'Matrix': 'matrix',
+    'Sparks HIGH memory usage': 'sparks',
+    'Esport': 'esport',
+    'placeholder': 'bsmoky'
 }
 @advanced color bg "Background Color" #203040
 @var checkbox a1    "🔴 Toggle Accents"      1
-@var checkbox h1    "#️⃣ Hotkeys Accented"               1
 @advanced color acc "  Accents" #76ff33
 @var            checkbox   cf                   "🔎 Enable custom screen size"       0
 @var            range      fontSize             "  Screen Size"                  [72, 50, 100, "%"]
@@ -26,19 +27,20 @@
 @var            range      br                   "💡 Brightness"                      [100, 50, 150, "%"]
 @var            checkbox   bR                   "📏 Border Edges"       0
 
-@var            range      bor                  "  Border Radius"                      [1, 0, 100, "px"]
+@var            range      bor                  "  Border Radius"                      [1, 0, 40, "px"]
 @var            checkbox   clientinfo           '❌ No Client Info'               1
 @advanced select b2 "👥 Friend List Logo" {
     "a2:Default": "default",
     "b2:Person*": "person",
     "c2:Smiley": "smiley"
 }
-@var select   b3    "▶️ Play Button Gifs"               {"Default*": 'default','Gif 2': 'alt2','Freeze': 'freeze','Ydzero': 'ydzero','Meteor': 'meteor','Matrix': 'matrix','No Gif Dark': 'ngd'}
+@var select   b3    "▶️ Play Button Gifs"               {'Default*': 'default','Gif 2': 'alt2','Freeze': 'freeze','Ydzero': 'ydzero','Meteor': 'meteor','Matrix': 'matrix','No Gif Dark': 'ngd'}
 
 @var checkbox m1    "➡️ Modules Appear right side"      1
 @var checkbox m3    "🔄 Modules in garage Redesign"     1
 @var checkbox m2    "🤏 Compact Modules"                1
 @var checkbox c1    "🆕 New Clan Page"                  1
+@var checkbox h1    "#️⃣ Hotkeys Accented"               1
 @var checkbox bp1   "⚔️ Quicker Battle Pick"            1
 
 ==/UserStyle== */
@@ -91,6 +93,26 @@ if b1 == "sparks" {
     background-position: bottom;
     }
 }
+if b1 == "esport" {  
+.Common-container,
+.LobbyLoaderComponentStyle-container {
+    background-image: url(https://pages.tankionline.com/images/summer-major/YhQ1TGYJXrSigrjLSuuO/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    }
+.LobbyLoaderComponentStyle-container {
+    opacity: 0.9;
+    }
+}/*
+if b1 == "placeholder" {  
+.Common-container,
+.LobbyLoaderComponentStyle-container {
+    background-image: url() imp;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    }*/
 
 
 /*Shop*/
@@ -101,7 +123,26 @@ if b1 == "sparks" {
 /*Accents*/
 if a1 {
 
+/*Settings*/
+.SettingsMenuComponentStyle-slideMenuOptions {
+    background: linear-gradient(to right, transparent, transparent);
+}
+.SettingsMenuComponentStyle-slideMenuOptions::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, acc, transparent);
+    opacity: 0.25;
+}
+.SettingsMenuComponentStyle-yellowLineMenuOptions {
+    background-color: acc;
+    box-shadow: acc 0px 0px 0.676em 0px;
+}
 
+/*thx Indifferental, i cba to look for them all so i copied <3*/
+.MainScreenComponentStyle-containerPanel > .UserScoreComponentStyle-blockRightPanel > .Common-flexCenterAlignCenter > .Common-maskImageContain, .MainScreenComponentStyle-containerPanel > .UserScoreComponentStyle-blockRightPanel > .BreadcrumbsComponentStyle-logout > .BreadcrumbsComponentStyle-iconLogout, .BreadcrumbsComponentStyle-rightButtonsContainer > .Common-flexCenterAlignCenter > div, .BreadcrumbsComponentStyle-rightButtonsContainer > .BreadcrumbsComponentStyle-exitGameButton > .IconStyle-iconLogOff, .BreadcrumbsComponentStyle-backButton > .IconStyle-iconBackArrow {
+    background-color: acc;
+}
 .Common-flexStartAlignCenter.Common-flexWrapNowrap.modeLimitIcon {
     background: bg;
     filter: contrast(90%);
@@ -402,8 +443,13 @@ if b2 == "default" {
     height: 1.2em;
     margin-top: 0.0625em;
 }
-/*Garage*/
 
+
+/*Garage*/
+.SuppliesComponentStyle-cellAdd {
+    background-color: rgba(0, 0, 0, .06);
+    backdrop-filter: blur(3px); 
+}
 /*Bottom gradient*/
 .ListItemsComponentStyle-itemsListContainer {
     background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0 0 0) 100%);
@@ -476,6 +522,9 @@ if m3 {
     top: -2em  imp;
 }
 }
+
+
+
 if c1 {
 /*clan page*/
 .ClanHeaderComponentStyle-blockInform {
@@ -501,6 +550,7 @@ if c1 {
     width: 6.875em;
     }
 }
+
 
 /*results*/
 /*from tanki tweaks and NUI+*/
@@ -597,6 +647,8 @@ if ttw {
     }
 }
 
+
+
 /*play button vid*/
 .MainScreenComponentStyle-buttonPlay {
     backdrop-filter: blur(1.563em);
@@ -670,8 +722,18 @@ if b3 == "ngd" {
     mix-blend-mode: color;
     pointer-events: none;
 }
+
+
+
 if bR {
 /*borders*/
+/*.MatchmakingWaitComponentStyle-container,*/
+
+.GarageCommonStyle-animatedBlurredRightBlock,
+.SuppliesComponentStyle-cellAdd,
+.TableMainQuestComponentStyle-cardRewardCompletedTable::before,
+.TableMainQuestComponentStyle-commonTableMainQuest,
+.TableMainQuestComponentStyle-cardRewardGivenTable,
 .ScrollingCardsComponentStyle-scrollCard,
 .Common-flexStartAlignCenter.Common-flexWrapNowrap.modeLimitIcon, 
 .Common-activeMenu.Common-flexCenterAlignCenter.Common-whiteSpaceNoWrap,
@@ -687,6 +749,17 @@ if bR {
 .MainScreenComponentStyle-playButtonContainer:hover {
     border-radius: bor imp;
     }
+}
+
+
+
+/*Challenge Accepted page*/
+.ratings {
+    align-items: flex-start;
+    background: linear-gradient(270deg, #000, #0000);
+}
+.ratings .rating-list-wrapper .season-wrapper .season span,.ratings .rating-list-wrapper .season-wrapper .season small,.ratings .rating-list-wrapper .rating-list .list-header {
+    color: #fff;
 }
 
 }
