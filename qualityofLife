@@ -1,0 +1,692 @@
+    /* ==UserStyle==
+@name           Tanki Online Quality of Life Theme
+@namespace      github.com/openstyles/stylus
+@version        1
+@description    Quality of Life updates with detailed customization. Contact https://discord.gg/agYuVjUv
+@updateURL      
+@author         Borz
+@preprocessor   stylus
+
+
+@var checkbox ttw    "If using Tanki Tweaks, toggle this off"      1
+@advanced select b1 "Background" {
+    "a1:Default*": "default",
+    "b1:Linear": "linear",
+    "c1:Radial": "radial",
+    "d1:Matrix": "matrix",
+    "e1:Sparks HIGH memory usage": "sparks"
+}
+@advanced color bg "Background Color" #203040
+@var checkbox a1    "🔴 Toggle Accents"      1
+@advanced color acc "  Accents" #76ff33
+@var            checkbox   cf                   "🔎 Enable custom screen size"       0
+@var            range      fontSize             "  Screen Size"                  [72, 50, 100, "%"]
+@var            range      st                   "🟧 Saturation"                      [100, 50, 150, "%"]
+@var            range      br                   "💡 Brightness"                      [100, 50, 150, "%"]
+@var            checkbox   bR                   "📏 Border Edges"       0
+
+@var            range      bor                  "  Border Radius"                      [1, 0, 100, "px"]
+@var            checkbox   clientinfo           '❌ No Client Info'               1
+@advanced select b2 "👥 Friend List Logo" {
+    "a2:Default": "default",
+    "b2:Person*": "person",
+    "c2:Smiley": "smiley"
+}
+@var select   b3    "▶️ Play Button Gifs"               {"Default*": 'default','Gif 2': 'alt2','Freeze': 'freeze','Ydzero': 'ydzero','Meteor': 'meteor','Matrix': 'matrix','No Gif Dark': 'ngd'}
+
+@var checkbox m1    "➡️ Modules Appear right side"      1
+@var checkbox m3    "🔄 Modules in garage Redesign"     1
+@var checkbox m2    "🤏 Compact Modules"                1
+@var checkbox c1    "🆕 New Clan Page"                  1
+@var checkbox h1    "#️⃣ Hotkeys Accented"               1
+@var checkbox bp1   "⚔️ Quicker Battle Pick"            1
+
+==/UserStyle== */
+imp =  !important
+@-moz-document domain("tankionline.com") {
+
+/*Game*/
+/*Screen Size, Saturation and Brightness*/
+if cf {
+html { 
+    font-size: (fontSize);
+    }
+}
+html { 
+    filter: saturate(st) brightness(br);
+}
+
+/*Background*/
+.wrapper {
+    background: radial-gradient(50% 100% at 50% 100%, rgb(0, 0, 0) 0%, rgb(0 0 0) 100%);
+}
+if b1 == "radial" {
+.Common-container,
+.LobbyLoaderComponentStyle-container, .NewShopCommonComponentStyle-commonContainer {
+    background: radial-gradient(bg 0%, #000 100%);
+    }
+}
+if b1 == "linear" {  
+.Common-container,
+.LobbyLoaderComponentStyle-container, .NewShopCommonComponentStyle-commonContainer {
+    background: linear-gradient(360deg, bg, #000);
+    }
+}
+if b1 == "matrix" {  
+.Common-container,
+.LobbyLoaderComponentStyle-container {
+    background-image: linear-gradient(#00000070 0%, bg 100%),url(https://tankionline.com/play/static/images/legendPlusBg.295a98bb.gif);
+    background-size: contain;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    }
+}
+if b1 == "sparks" {  
+.Common-container,
+.LobbyLoaderComponentStyle-container {
+    background-image: url(/play/static/images/sparks.990b5664.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    }
+}
+
+
+/*Shop*/
+.NewShopCommonComponentStyle-gradient {
+    filter: contrast(1.5);
+}
+
+/*Accents*/
+if a1 {
+
+
+.Common-flexStartAlignCenter.Common-flexWrapNowrap.modeLimitIcon {
+    background: bg;
+    filter: contrast(90%);
+}
+.TableMainQuestComponentStyle-cardRewardCompletedTable:active {
+    box-shadow: acc 0px 0px 0px 2px;
+    animation: 0.5s linear 0s 1 normal none running trash;
+}
+@keyframes trash{
+    0% {
+    filter: grayscale(0.5);
+}
+
+    10% {
+    filter: grayscale(1);
+}
+    100% {
+    filter: grayscale(0.5);
+}
+}
+.TableMainQuestComponentStyle-cardRewardCompletedTable {
+    background: transparent;
+    box-shadow: acc 0px 0px 0px 0.025em;
+    border-radius: 0.5em;
+}
+.TableMainQuestComponentStyle-cardRewardCompletedTable::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: acc;
+    opacity: 0.2; /* 20% */
+    pointer-events: none;
+    border-radius: 0.5em;
+}
+.TableMainQuestComponentStyle-cardRewardCompletedTable:hover,
+.MainQuestComponentStyle-cardRewardCompleted:hover,
+.ItemDescriptionComponentStyle-blockButtons:hover {
+    position: relative;
+    background-color: transparent;
+    box-shadow: acc 0px 0px 0px 0.125em;
+    overflow: hidden;
+}
+
+/* 40% opacity overlay */
+.TableMainQuestComponentStyle-cardRewardCompletedTable:hover::before,
+.MainQuestComponentStyle-cardRewardCompleted:hover::before,
+.ItemDescriptionComponentStyle-blockButtons:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: acc;
+    opacity: 0.4; /* 40% */
+    pointer-events: none;
+}
+
+/*friends list*/
+.FriendListComponentStyle-buttonAddFriends img {
+    filter: brightness(0) invert(1) imp;
+}
+.FriendListComponentStyle-buttonAddFriends {
+    width: 12.375em;
+    height: 3em;
+    border-radius: 0.5em;
+    background-color: rgba(118, 255, 51, 0.25);
+    box-shadow: acc 0em 0em 0em 1px;
+    transition: background 0.3s;
+}
+.FriendListComponentStyle-buttonAddFriends:hover{
+    box-shadow: acc 0em 0em 0em 2px;
+}
+.FriendListComponentStyle-blockList:has(.FriendListComponentStyle-greenTextOnline) {
+    position: relative;
+    background: transparent; /* stays the same */
+    overflow: hidden;
+}
+.FriendListComponentStyle-blockList:has(.FriendListComponentStyle-greenTextOnline)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: acc;
+    opacity: 0.25;
+    pointer-events: none;
+}
+.FriendListComponentStyle-blockList:has(.FriendListComponentStyle-greenTextOnline):hover {
+    box-shadow: inset acc 0em 0em 0.1em 0.09em  imp; 
+}
+.FriendListComponentStyle-blockList {
+     background-color: rgba(0, 0, 0, .34);
+}
+.FriendListComponentStyle-blockList:hover {
+    box-shadow: inset #ffffff7d 0em 0em 0.1em 0.09em  imp;
+}
+.FriendListComponentStyle-blockList:has(.FriendListComponentStyle-greenTextOnline) .FriendListComponentStyle-nickName > span {
+    color: acc  imp;
+}
+.FriendListComponentStyle-greenTextOnline {
+    color: acc imp;
+}
+.FriendListComponentStyle-buttonAddFriends {
+    background-color: acc imp;   
+}
+.FriendListComponentStyle-buttonAddFriends {
+    position: relative;
+    background-color: transparent  imp; /* stays the same */
+    overflow: hidden;
+}
+.FriendListComponentStyle-buttonAddFriends::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: acc;
+    opacity: 0.25;
+    pointer-events: none;
+}
+.ConverterDialogComponentStyle-modal {
+    background: radial-gradient(50% 100% at 50% 100%, bg 0%, rgb(0, 0, 0) 100%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.313em 1.25em 0px;
+    outline: rgba(255, 255, 255, 0.25) solid 0.063em;
+    }
+.UserInfoContainerStyle-containerProgressMainScreen > .Common-flexStartAlignStartColumn:after {
+    background: acc;
+    box-shadow: acc 0em 0em 1px 0px;
+    border-radius: 0em;
+    }
+.UserInfoContainerStyle-containerProgressMainScreen > .Common-flexStartAlignStartColumn {
+    background: rgba(255,255,255,.31);
+    min-width: 10.6em;
+    margin-top: 0.4em;
+    border-radius: 0em;
+    }
+.UserInfoContainerStyle-progressValue {
+    font-family: 'BaseFontBold';
+    color: acc;
+    }
+.descriptionMode:hover h2, .descriptionMode:hover span,
+.MainScreenComponentStyle-playButtonContainer span,
+.ItemDescriptionComponentStyle-blockButtons span,
+.TankParametersStyle-parametersBlockGear span,
+.PrimaryMenuItemComponentStyle-itemCommonLi:hover .PrimaryMenuItemComponentStyle-itemName,
+.Common-activeMenu,.ProBattlesComponentStyle-createBattleButton,
+.MenuComponentStyle-mainMenuItem:hover,
+.UserInfoContainerStyle-containerProgressMainScreen > .UserInfoContainerStyle-containerParameterProgress > .UserInfoContainerStyle-progressValue > span {
+    color: acc;
+    }
+.Common-activeMenu:hover {
+    color: acc;
+    filter: brightness(130%);
+    }
+.Common-activeMenu.Common-flexCenterAlignCenter.Common-whiteSpaceNoWrap {
+    background-color: rgba(255, 255, 255, .12);
+    border-radius: 0.3em;
+    text-shadow: acc 0px 0px 0.507em;
+    }
+.UserInfoContainerStyle-xpIcon {
+    background-color: acc  imp;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    filter: drop-shadow(0 0 1px acc)  imp;
+    }
+.Common-menuItemActive {
+    background-color: acc imp;
+    box-shadow: acc 0em 0em 0.375em;
+    filter: drop-shadow(acc 0em 0em 0.375em);
+    }
+.UserInfoContainerStyle-blockForIconTankiOnline {
+    mask-image: url(/play/static/images/logoTankiOnline.2a9c236f.svg);
+    background: acc;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    width: 12em;
+    height: 4em;
+    }
+.UserInfoContainerStyle-blockForIconTankiOnline img {
+    display: none; 
+    }
+.FooterComponentStyle-clanButton:hover div, .FooterComponentStyle-friendButton:hover div, .FooterComponentStyle-chatButton:hover div, .FooterComponentStyle-newsButton:hover div {
+    background-color: acc imp;
+    }
+.FooterComponentStyle-containerMenu:hover {
+    box-shadow: acc 0em 0em 0em 0.125em;
+    }
+.FooterComponentStyle-containerMenu:hover {
+    box-shadow: acc 0em 0em 0em 0.125em;
+    }
+.ScrollingCardsComponentStyle-scrollCard:hover {
+    box-shadow: acc 0em 0em 0em 2px;
+    }
+.PrimaryMenuItemComponentStyle-itemCommonLi:hover {
+    box-shadow: acc 0em 0em 0em 0.125em;
+    border-radius: 0.5em;
+    }
+.TankParametersStyle-iconGS, .TankParametersStyle-iconGSSmall {
+    filter: grayscale(1);
+    }
+.TableMainQuestComponentStyle-cardRewardCompletedTable:hover,.MainQuestComponentStyle-cardRewardCompleted:hover,.ItemDescriptionComponentStyle-blockButtons:hover {
+    box-shadow: acc 0px 0px 0px 0.125em;
+    }
+.Common-maskImageContain.BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter {
+    background-color: acc;
+    }
+.ProBattlesComponentStyle-mainContainer .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter .Common-flexCenterAlignCenter > .Common-maskImageContain:hover {
+        background-color: acc;
+    }
+.PrimaryMenuItemComponentStyle-itemCommonLi:hover div {
+    background-color: acc imp;
+    transition: 0.2s ease-in-out;
+    }
+.MainScreenComponentStyle-playButtonContainer span {
+    text-shadow: acc 0px 0px 0.625em;
+    }
+.Common-flexSpaceBetweenAlignCenterColumn.descriptionMode.blockCard:hover {
+    position: relative;
+    transition-delay: 0s;
+    box-shadow: acc 0 0 0 0.125em  imp;
+    background: transparent;
+    overflow: hidden;
+    }
+.Common-flexSpaceBetweenAlignCenterColumn.descriptionMode.blockCard:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: acc;
+    opacity: 0.4;
+    pointer-events: none;
+    }
+.blockCard:hover .Common-flexCenterAlignCenter {
+    background-color: acc imp;
+    }
+.Common-flexSpaceBetweenAlignCenterColumn.descriptionMode.blockCard {
+    transition: all 0.2s ease-in-out 0.2s;
+    }
+.MainScreenComponentStyle-playButtonContainer:hover {
+    box-shadow: acc 0em 0em 0em 2px imp;
+    }
+
+}
+
+/*Hotkeys*/
+if h1 {
+.Common-buttonQE, .BreadcrumbsComponentStyle-backButton h3  {
+    background-color: acc;
+    }
+.Common-buttonQE:hover {
+    background-color: acc;
+    filter: brightness(130%); 
+    }
+.HotKey-commonBlockForHotKey {
+    background-color: acc;
+    color: #1f1f1f;
+    }
+.HotKey-commonBlockForHotKey:hover, .BreadcrumbsComponentStyle-backButton h3:hover {
+    background-color: acc;
+    color: #1f1f1f;
+    filter: brightness(130%);
+    }
+}
+
+
+/*Battle Picker*/
+if bp1 {
+.BattlePickComponentStyle-modeCards {
+    position: relative;
+    right: 22%;
+    bottom: 6.3em;
+    }
+}
+/*Bottom Right Client Info*/
+.ClientInfoComponentStyle-container {
+    opacity: (clientinfo == 1 ? 1 : 0);
+    transition: opacity 0.3s ease;
+}
+/*Friend List asset change*/
+if b2 == "person" {
+    .FooterComponentStyle-friendButton div {
+        mask-image: url('/play/static/images/groupUser.67c9ec61.svg');
+    }
+}
+if b2 == "smiley" {
+    .FooterComponentStyle-friendButton div {
+        mask-image: url("https://s.eu.tankionline.com/624/126072/316/130/31225421533034/image.svg");
+        width: 3.5em  imp;
+        height: 2em;
+    }
+}
+if b2 == "default" {
+    .FooterComponentStyle-friendButton div {
+        display: unset;
+    }
+}
+.UserInfoContainerStyle-xpIcon {
+    mask-image: url(/play/static/images/iconExperiencePremium.31caa4ad.svg);
+    background-image: url("null");
+    background-color: #76ff33;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0.0625em;
+}
+/*Garage*/
+
+/*Bottom gradient*/
+.ListItemsComponentStyle-itemsListContainer {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0 0 0) 100%);
+}
+/*Weird blur on garage info is removed*/
+.GarageCommonStyle-animatedBlurredLeftBlock,
+.GarageCommonStyle-animatedBlurredRightBlock {
+    backdrop-filter: blur(0em);
+}
+/*Garage arrows transparent*/
+.ListItemsComponentStyle-itemsListContainer.CssCommonAnimations-appearFromBottom .Common-flexCenterAlignCenter {
+    background: #0000  imp;
+}
+/*that dumb festive mode button showing a little yellow is now gone*/
+.BattlePickComponentStyle-cardImgEvent.Common-backgroundImageContain.Common-backgroundImage {
+   background-size: cover imp;
+}
+/*Bottom right announcement fix*/
+.AnnouncementHomeScreenComponentStyle-mainContainer {
+    border: 0.063em solid rgba(255,255,255,0.25);
+    border-radius: 0.5em 0.5em 0 0;
+}
+.AnnouncementHomeScreenComponentStyle-mainContainer {
+    background-color: black;
+    border: 0.063em solid rgba(255,255,255,0.25);
+    border-radius: 0.5em 0.5em 0 0;
+}
+.AnnouncementHomeScreenComponentStyle-announceContainer {
+    background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, .48) 100%);
+}
+/*two row modules from sn0wcat/NUI+*/
+if m2  {
+.GarageMainScreenStyle-blockParameters:has(.GarageProtectionsComponentStyle-equipmentResistance)+div .ListItemsComponentStyle-itemsContainer {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    gap: 6px 0px;
+    height: auto;
+}
+}
+if m1 {
+/*Modules appear rightside in garage*/
+.CssCommonAnimations-appearFromLeft {
+    animation: fadeInFromRight 0.2s ease-out;
+}
+.Common-flexStartAlignStartColumn {
+    right: 0rem  imp; 
+}
+.GarageCommonStyle-animatedBlurredRightBlock {
+    top: -2em  imp;
+}
+@keyframes fadeInFromRight {
+    0% {opacity: 0;transform: translateX(100%);}100% {opacity: 1;transform: translateX(0);}
+}
+}
+if m3 {
+/*Modules redesigned*/
+.MountedItemsStyle-commonForCellResistenceName.Common-backgroundImage,
+.GarageProtectionsComponentStyle-mountedResistActive,.GarageProtectionsComponentStyle-mountedResist {
+    background-image: url(/play/static/images/protectionSlotEmpty.f0a3082e.svg)  imp;
+}
+.MountedItemsStyle-commonForCellResistenceName.Common-backgroundImage:hover, .GarageProtectionsComponentStyle-mountedResistActive:hover,.GarageProtectionsComponentStyle-mountedResist:hover {
+    background-image: url(/play/static/images/hoverProtectionEmptySlot.a0889570.svg)  imp;
+}
+
+.Common-flexStartAlignStartColumn {
+    right: 0rem  imp; 
+}
+.GarageCommonStyle-animatedBlurredRightBlock {
+    top: -2em  imp;
+}
+}
+if c1 {
+/*clan page*/
+.ClanHeaderComponentStyle-blockInform {
+    background-color: rgba(255, 255, 255, 0) imp;
+    background-image: url(/play/static/images/Background.975d9b65.webp);
+    box-shadow: rgba(255, 255, 255, .26) 0em 0em 0em 1px  imp;
+    border-radius: 0.1em 0.1em 0em 0em imp;
+}
+.ClanInfoComponentStyle-messageClan {
+    background-color: rgba(255, 255, 255, 0) imp;
+    box-shadow: rgba(255, 255, 255, .26) 0em 0em 0em 1px imp;
+    max-height: 48.65em;
+}
+.ClanHeaderComponentStyle-logo {
+    mask-image: url(/play/static/images/logo.e64f36db.svg);
+    background: acc;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    height: 5.875em;
+    margin-left: 0px;
+    position: absolute;
+    width: 6.875em;
+    }
+}
+
+/*results*/
+/*from tanki tweaks and NUI+*/
+if ttw {
+.BattleKillBoardComponentStyle-tableContainer table thead:has(+ tbody #teamRowSpace) {
+    pointer-events: none imp;
+    filter: drop-shadow(50.5em 0px 0px white);
+}
+.BattleResultStyle-crystalSize {
+    filter: drop-shadow(50.5em 0px 0px #00d4ff);
+}
+.BattleResultStyle-starSize {
+    pointer-events: none imp;
+    filter: drop-shadow(50.5em 0px 0px #f3d32d);
+}/*script from "Tanki Tweaks" Niced!*/
+.BattleKillBoardComponentStyle-tableContainer table {
+    align-items:center imp;
+    height:42em imp;
+    width:100em imp
+}
+.BattleKillBoardComponentStyle-tableContainer table td,
+.BattleKillBoardComponentStyle-tableContainer table th {
+    box-sizing:border-box imp;
+    flex-shrink:0 imp;
+    margin:0 imp;
+    max-width:unset imp;
+    min-width:unset imp
+}
+.BattleKillBoardComponentStyle-tableContainer table tr {
+    width:49.5em imp
+}
+.BattleKillBoardComponentStyle-tableContainer table tr > * {
+    width:9.28% imp
+}
+.BattleKillBoardComponentStyle-tableContainer table tr > * > * {
+    margin:0 imp
+}
+.BattleKillBoardComponentStyle-tableContainer table tr > :first-child {
+    width:35% imp
+}
+.BattleKillBoardComponentStyle-tableContainer table > thead {
+    padding-right: 1em imp
+}
+.BattleKillBoardComponentStyle-tableContainer table > thead > tr {
+    pointer-events:none imp
+}
+.BattleKillBoardComponentStyle-tableContainer table > thead > tr > :first-child {
+    padding-left:.75em imp
+}
+.BattleKillBoardComponentStyle-tableContainer table > thead > tr > th > :nth-child(2) {
+    display:none imp
+}
+.BattleKillBoardComponentStyle-tableContainer table > tbody {
+    display:grid imp;
+    gap:.3em 1em imp;
+    grid-auto-flow:column imp;
+    grid-auto-rows:min-content imp;
+    grid-template-columns:1fr 1fr imp;
+    padding-right:1em imp;
+    width:100% imp
+}
+.BattleKillBoardComponentStyle-tableContainer table > tbody > tr {
+    grid-column:1/2 imp;
+    height:2.5em imp
+}
+.BattleKillBoardComponentStyle-tableContainer table > tbody > tr#enemyCommand {
+    grid-column:2/3 imp
+}
+.BattleKillBoardComponentStyle-tableContainer table > tbody > tr#rowSpace,
+.BattleKillBoardComponentStyle-tableContainer table > tbody > tr#teamRowSpace {
+    display:none imp
+}
+.BattleKillBoardComponentStyle-tableContainer table:not(:has(>tbody>#teamRowSpace)) {
+    width:50em imp
+}
+.BattleKillBoardComponentStyle-tableContainer table:not(:has(>tbody>#teamRowSpace)) tr {
+    grid-column:1/2 imp;
+    width:50em imp
+}
+.BattleKillBoardComponentStyle-tableContainer table:not(:has(>tbody>#teamRowSpace)) > thead > :nth-child(2) {
+    display:none imp
+}
+.BattleKillBoardComponentStyle-tableContainer table:not(:has(>tbody>#teamRowSpace)) > tbody {
+    grid-template-columns:1fr imp
+}
+.BattleResultNavigationComponentStyle-commonBlockButtonNextLeave {
+    flex-direction:row imp;
+    height:8.125em imp;
+    width:17em imp
+}
+.BattleResultNavigationComponentStyle-commonBlockButtonNextLeave > :first-child {
+    margin-bottom:0 imp;
+    margin-right:.5em imp
+    }
+}
+
+/*play button vid*/
+.MainScreenComponentStyle-buttonPlay {
+    backdrop-filter: blur(1.563em);
+    background-color: rgb(0, 25, 38);
+    background-image: url("/play/static/images/videoplay.79570900.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 21.875em;
+    height: 10.75em;
+}
+if b3 == "alt2" {
+.MainScreenComponentStyle-buttonPlay {
+    background-image: linear-gradient((130)deg, #1fff0066 0%, #006c0b69 70%),url(https://pages.tankionline.com/images/landings/v3/video-tanki.gif);
+    }
+}
+if b3 == "freeze" {
+.MainScreenComponentStyle-buttonPlay {
+    background-image: linear-gradient((130)deg, #1fff0066 0%, #006c0b69 70%),url(https://tankionline.com/en/wp-content/uploads/2018/09/xt-freeze.gif);
+    }
+}
+if b3 == "ydzero" {
+.MainScreenComponentStyle-buttonPlay {
+    background-image: linear-gradient((130)deg, #1fff0066 0%, #006c0b69 70%),url(http://tankionline.com/en/wp-content/uploads/2012/02/ydzero.gif);
+    background-size: cover;
+    background-position: bottom;
+    }
+}
+if b3 == "meteor" {
+.MainScreenComponentStyle-buttonPlay {
+    background-image: linear-gradient((130)deg, #1fff0066 0%, #006c0b69 70%),url(https://tankionline.com/en/wp-content/uploads/2018/04/cosmos-meteor.gif);
+    }
+}
+if b3 == "matrix" {
+.MainScreenComponentStyle-buttonPlay {
+    background-image: linear-gradient((130)deg, #1fff002e 0%, #006c0b00 70%),url(https://tankionline.com/play/static/images/legendPlusBg.295a98bb.gif);
+    }
+}
+if b3 == "ngd" {
+.MainScreenComponentStyle-buttonPlay {
+    backdrop-filter: blur(0.263em);
+    background-color: rgb(0, 0, 0) imp;
+    background-image: url(null) imp;
+    opacity: 1;
+    }
+.MainScreenComponentStyle-playButtonContainer {
+    background: linear-gradient(-30deg, #00000017 0%, #000 100%) imp; 
+    border-radius: 0.5em imp;
+    box-shadow: rgba(0, 0, 0, .25) 0em 0em 0em 0.063em imp;
+
+    }
+.MainScreenComponentStyle-playButtonContainer:hover {
+    box-shadow: acc 0em 0em 0em 2px imp;
+    background: linear-gradient(-20deg, #00000017 0%, #000 100%) imp;
+    }
+}
+
+
+
+.MainQuestComponentStyle-progress, .TableMainQuestComponentStyle-progressTableMission {
+    background: black;
+}
+.TableMainQuestComponentStyle-progressTableMission {
+    position: relative;
+}
+.TableMainQuestComponentStyle-progressTableMission::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1em;
+    background: acc;
+    mix-blend-mode: color;
+    pointer-events: none;
+}
+if bR {
+/*borders*/
+.ScrollingCardsComponentStyle-scrollCard,
+.Common-flexStartAlignCenter.Common-flexWrapNowrap.modeLimitIcon, 
+.Common-activeMenu.Common-flexCenterAlignCenter.Common-whiteSpaceNoWrap,
+.DialogContainerComponentStyle-container,
+.ConverterDialogComponentStyle-modal,
+.FriendListComponentStyle-blockList:has(.FriendListComponentStyle-greenTextOnline),
+.FriendListComponentStyle-blockList,
+.BattlePassLobbyComponentStyle-menuBattlePass,
+.EventBattlePassLobbyComponentStyle-buttonEventBattlePass,
+.PrimaryMenuItemComponentStyle-itemCommonLi:hover,
+.MainScreenComponentStyle-buttonPlay,
+.MainScreenComponentStyle-playButtonContainer,
+.MainScreenComponentStyle-playButtonContainer:hover {
+    border-radius: bor imp;
+    }
+}
+
+}
