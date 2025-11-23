@@ -18,6 +18,7 @@
 }
 @advanced color bg "Background Color" #203040
 @var checkbox a1    "🔴 Toggle Accents"      1
+@var checkbox h1    "#️⃣ Hotkeys Accented"               1
 @advanced color acc "  Accents" #76ff33
 @var            checkbox   cf                   "🔎 Enable custom screen size"       0
 @var            range      fontSize             "  Screen Size"                  [72, 50, 100, "%"]
@@ -38,7 +39,6 @@
 @var checkbox m3    "🔄 Modules in garage Redesign"     1
 @var checkbox m2    "🤏 Compact Modules"                1
 @var checkbox c1    "🆕 New Clan Page"                  1
-@var checkbox h1    "#️⃣ Hotkeys Accented"               1
 @var checkbox bp1   "⚔️ Quicker Battle Pick"            1
 
 ==/UserStyle== */
