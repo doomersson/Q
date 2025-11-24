@@ -18,9 +18,9 @@
     'Esport': 'esport',
     'placeholder': 'bsmoky'
 }
-@advanced color bg "Background Color" rgba(203, 172, 123, 1)
+@advanced color bg "Background Color" rgba(32, 48, 64, 1)
 @var checkbox a1    "🔴 Toggle Accents"      1
-@advanced color acc "  Accents" #cbac7b
+@advanced color acc "  Accents" rgba(203, 172, 123, 1)
 @var            checkbox   cf                   "🔎 Enable custom screen size"       0
 @var            range      fontSize             "  Screen Size"                  [72, 50, 100, "%"]
 @var            range      st                   "🟧 Saturation"                      [100, 50, 150, "%"]
@@ -29,7 +29,7 @@
 
 @var            range      bor                  "  Border Radius"                      [1, 0, 40, "px"]
 @advanced color btc "Battle Tab Color" #001925
-@var            range      ttb                  "Background Blur"                      [1, 0, 10, "px"]
+@var            range      ttb                  "Battle Tab Blur"                      [1, 0, 10, "px"]
 @advanced select b2 "👥 Friend List Logo" {
     "a2:Default": "default",
     "b2:Person*": "person",
@@ -37,12 +37,16 @@
 }
 @var select   b3    "▶️ Play Button Gifs"               {'Default*': 'default','Gif 2': 'alt2','Freeze': 'freeze','Ydzero': 'ydzero','Meteor': 'meteor','Matrix': 'matrix','No Gif Dark': 'ngd'}
 
+@advanced select hk "#️⃣ Hotkeys" {
+    "a3:Default": "default",
+    "b3:Dark": "hkd",
+    "c3:Accent*": "hka"
+}
 @var checkbox clin  "❌ No Client Info"                 1
 @var checkbox m1    "➡️ Modules Appear right side"      1
 @var checkbox m3    "🔄 Modules in garage Redesign"     1
 @var checkbox m2    "🤏 Compact Modules"                1
 @var checkbox c1    "🆕 New Clan Page"                  1
-@var checkbox h1    "#️⃣ Hotkeys Accented"               1
 @var checkbox bp1   "⚔️ Quicker Battle Pick"            1
 
 ==/UserStyle== */
@@ -58,6 +62,15 @@ html {
 }
 html { 
     filter: saturate(st) brightness(br);
+}
+
+.BattleTabStatisticComponentStyle-blueTeamTableContainer table tbody {
+    --row-background-color: rgba(0, 212, 255, .25) imp;
+    --selected-row-background-color: rgba(acc .25) imp;
+}
+.BattleTabStatisticComponentStyle-redTeamTableContainer table tbody {
+    --row-background-color: rgba(255, 0, 0, .25) imp;
+    --selected-row-background-color: rgba(254, 102, 102, 0.25) imp;
 }
 
 /*Background*/
@@ -121,16 +134,21 @@ if b1 == "placeholder" {
 .NewShopCommonComponentStyle-gradient {
     filter: contrast(1.5);
 }
-
-.BattlePassLobbyComponentStyle-menuBattlePass {
-    background: linear-gradient(0deg, rgba(0, 25, 38, 0.25) 0%, rgba(acc, 0.5) 100%);
-    filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 4px 4px);
-}
-
 /*Main Accents*/
 if a1 {
 
-/*Settings*/
+.TanksPartComponentStyle-amountItems {
+    background-color: acc;
+    box-shadow: acc 0px 0px 1.25rem 0px;
+}
+.BattlePassLobbyComponentStyle-menuBattlePass {
+    background: linear-gradient(0deg, rgba(0, 0, 0, .25) 0%, rgba(acc, 0.5) 100%);
+    filter: drop-shadow(rgba(0, 0, 0, 0.25) 0px 4px 4px);
+    box-shadow: acc 0em 0em 0em 1px;
+}
+.BattlePassLobbyComponentStyle-menuBattlePass:hover {
+    box-shadow: acc 0em 0em 0em 2px;
+}
 .SettingsMenuComponentStyle-slideMenuOptions {
     background: linear-gradient(to right, transparent, transparent);
 }
@@ -173,6 +191,27 @@ if a1 {
 .MainScreenComponentStyle-containerPanel > .UserScoreComponentStyle-blockRightPanel > .Common-flexCenterAlignCenter > .Common-maskImageContain, .MainScreenComponentStyle-containerPanel > .UserScoreComponentStyle-blockRightPanel > .BreadcrumbsComponentStyle-logout > .BreadcrumbsComponentStyle-iconLogout, .BreadcrumbsComponentStyle-rightButtonsContainer > .Common-flexCenterAlignCenter > div, .BreadcrumbsComponentStyle-rightButtonsContainer > .BreadcrumbsComponentStyle-exitGameButton > .IconStyle-iconLogOff, .BreadcrumbsComponentStyle-backButton > .IconStyle-iconBackArrow {
     background-color: acc;
 }
+.MainScreenComponentStyle-containerForMenuGradient > .Common-displayFlex > .MainScreenComponentStyle-buttonPlay > .Common-backgroundImageContain {
+    mask-image: url("/play/static/images/lockButtonPlay.4bb62c08.svg");
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: acc;
+    background-image: unset;
+}
+.NotificationViewStyle-progressNotification {
+    background: transparent;
+    opacity: 0.15;
+    filter: saturate(0) brightness(2);
+    clip-path: inset(0px 0px 0px round 15px);
+}
+.NotificationViewStyle-progressNotification {
+    background-color: rgba(bg, 0.3);
+    border: 0px none transparent;
+    margin-top: 0px;
+    width: inherit;
+    height: 13.25em;
+}
  .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter {
     background-color: rgba(acc, 0.3);
 }
@@ -182,7 +221,7 @@ if a1 {
 }
 .ContextMenuStyle-menu {
     backdrop-filter: blur(0.125em);
-    background-color: bg;
+    background-color: rgba(bg , 0.3);
     box-shadow: acc 0px 0px 0.23em 0px;
 }
 .TableMainQuestComponentStyle-cardRewardCompletedTable:active {
@@ -430,7 +469,8 @@ if a1 {
 }
 
 /*Hotkeys*/
-if h1 {
+
+if hk == "hka" {
 .Common-buttonQE, .BreadcrumbsComponentStyle-backButton h3, .ProBattlesComponentStyle-createBattleButton h3  {
     background-color: acc;
     }
@@ -447,6 +487,37 @@ if h1 {
     color: #1f1f1f;
     filter: brightness(130%);
     }
+}
+if hk == "hkd" {
+    .HotKey-commonBlockForHotKey,.ProBattlesComponentStyle-createBattleButton h3,.BreadcrumbsComponentStyle-backButton h3 {
+    background-image: linear-gradient(#1d1d1d, #000) imp;
+    color: rgb(255, 255, 255) imp;
+    box-shadow: rgba(255, 255, 255, .26) 0em 0em 0em 1px imp;
+}
+.Common-buttonQE {
+    background-image: linear-gradient(#d0d0d0, #fff) imp;
+    box-shadow: rgba(0, 0, 0, .26) 0em 0em 0em 1px imp;
+    filter: invert(1)!important;
+}
+.HotKey-inlineBlockForHotKey {
+    background-image: linear-gradient(#d0d0d0, #fff) imp;
+    box-shadow: rgba(0, 0, 0, .26) 0em 0em 0em 1px imp;
+    filter: invert(1) imp;
+}
+}
+if hk == "default" {
+    xaxaxaxaxasx {
+        display: unset;
+    }
+}
+/*battle toast*/
+.BattleMessagesComponentStyle-container {
+    height: 100%;
+    width: 100vw;
+    top: 4em;
+}
+.BattleMessagesComponentStyle-message {
+    background: rgba(bg, .26);
 }
 
 
@@ -602,6 +673,11 @@ if c1 {
 
 /*results*/
 /*from tanki tweaks and NUI+*/
+
+.BattleTabStatisticComponentStyle-commonBlockScroll {
+    scrollbar-color: rgba(acc, 0.3) rgba(255, 255, 255, 0);
+    scrollbar-width: thin;
+}
 if ttw {
 .BattleKillBoardComponentStyle-tableContainer table thead:has(+ tbody #teamRowSpace) {
     pointer-events: none imp;
@@ -699,6 +775,7 @@ else {
         .MatchmakingWaitComponentStyle-container {
             background-image: linear-gradient(90deg,bg, black) imp;
             box-shadow: inset .3em 0 acc, inset -.3em 0 acc imp;
+            border-radius: bor imp;
         }
     }
 }
@@ -788,10 +865,11 @@ if b3 == "ngd" {
 }
 
 
-
 if bR {
 /*borders*/
-/*.MatchmakingWaitComponentStyle-container,*/
+.BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter,
+.Common-flexCenterAlignCenterColumn.shop-item-component,
+.TanksPartComponentStyle-amountItems,
 .BattleTabStatisticComponentStyle-containerInsideTeams::before, .BattleTabStatisticComponentStyle-container.tt-expanded>.BattleTabStatisticComponentStyle-containerInsideTeams::before, :is(.BattleTabStatisticComponentStyle-container>:first-child)>.tt-background::before,
 .BattleTabStatisticComponentStyle-containerInsideTeams, .BattleTabStatisticComponentStyle-container.tt-expanded>.BattleTabStatisticComponentStyle-containerInsideTeams, :is(.BattleTabStatisticComponentStyle-container>:first-child)>.tt-background,
 .BattleTabStatisticComponentStyle-containerInsideTeams,
@@ -817,8 +895,8 @@ if bR {
     border-radius: bor imp;
     }
 }
-
 /*battle tab*/
+.BattleTabStatisticComponentStyle-container>:first-child,
 .BattleTabStatisticComponentStyle-containerInsideTeams, .BattleTabStatisticComponentStyle-container.tt-expanded>.BattleTabStatisticComponentStyle-containerInsideTeams, :is(.BattleTabStatisticComponentStyle-container>:first-child)>.tt-background {
     position: relative imp;
     background-color: rgba(0, 0, 0, .5) imp;
