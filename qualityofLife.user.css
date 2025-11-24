@@ -633,13 +633,6 @@ if m3 {
 .MountedItemsStyle-commonForCellResistenceName.Common-backgroundImage:hover, .GarageProtectionsComponentStyle-mountedResistActive:hover,.GarageProtectionsComponentStyle-mountedResist:hover {
     background-image: url(/play/static/images/hoverProtectionEmptySlot.a0889570.svg)  imp;
 }
-
-.Common-flexStartAlignStartColumn {
-    right: 0rem  imp; 
-}
-.GarageCommonStyle-animatedBlurredRightBlock {
-    top: -2em  imp;
-}
 }
 
 
