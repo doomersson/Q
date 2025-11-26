@@ -48,7 +48,8 @@
 @var checkbox m2    "🤏 Compact Modules"                1
 @var checkbox c1    "🆕 New Clan Page"                  1
 @var checkbox bp1   "⚔️ Quicker Battle Pick"            0
-@var checkbox sharingan   "goofy ahh loading"            0
+@var checkbox sHr   "👁️‍🗨️ Goofy ahh loading"              0
+@var checkbox XT    "🏆 Swap garage assets for XT"      1
 
 ==/UserStyle== */
 imp =  !important
@@ -65,11 +66,11 @@ html {
     filter: saturate(st) brightness(br);
 }
 .BattleTabStatisticComponentStyle-blueTeamTableContainer table tbody {
-    --row-background-color: rgba(0, 212, 255, .25) imp;
+    --row-background-color: rgba(0, 212, 255, .15) imp;
     --selected-row-background-color: rgba(acc .25) imp;
 }
 .BattleTabStatisticComponentStyle-redTeamTableContainer table tbody {
-    --row-background-color: rgba(255, 0, 0, .25) imp;
+    --row-background-color: rgba(255, 0, 0, .15) imp;
     --selected-row-background-color: rgba(254, 102, 102, 0.25) imp;
 }
 
@@ -1048,7 +1049,7 @@ else {
     color: #fff;
 }
 
-if sharingan {
+if sHr {
 @keyframes spin {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
@@ -1071,6 +1072,246 @@ if sharingan {
     transform: translate(-50%, -50%);
     animation: 2s linear 0s infinite normal none running spin;
     }
+}
+
+/*Garage items XT-fied*/
+if XT {
+
+.MountedItemsStyle-itemPreview[src*="/566/70102/323/360/27316026215470/"] {
+    background-image: 
+url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.MountedItemsStyle-itemPreview:is([src*="/566/70102/323/360/27316026215470/"]) {
+    width: 7em;
+    height: 0px;
+    padding: 4rem;
+}
+/*hornet*/
+.GarageItemComponentStyle-mainImg[src*="/566/70102/323/360/27316026215470/"] {
+    background-image: 
+url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*wasp*/
+.GarageItemComponentStyle-mainImg[src*="/574/114025/235/321/27623005403276/"] {
+    background-image: url(https://s.eu.tankionline.com/544/55321/27/365/27006221715450/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*paladin*/
+.GarageItemComponentStyle-mainImg[src*="/573/71447/126/60/27602130071361/"] {
+    background-image: url(https://s.eu.tankionline.com/573/71447/126/37/27602130032301/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*mammoth*/
+.GarageItemComponentStyle-mainImg[src*="/600/67532/1/65/30015726400661/"] {
+    background-image: url(https://s.eu.tankionline.com/600/67532/1/65/30015726400661/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*hopper*/
+.GarageItemComponentStyle-mainImg[src*="/564/5207/367/317/27221401743427/"] {
+    background-image: url(https://s.eu.tankionline.com/564/111272/25/147/27222256430152/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*hunter*/
+.GarageItemComponentStyle-mainImg[src*="/567/167060/364/47/27375614310446/"] {
+    background-image: url(https://s.eu.tankionline.com/547/121275/335/127/27006222147461/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*viking*/
+.GarageItemComponentStyle-mainImg[src*="/571/121327/171/265/27464265736706/"] {
+    background-image: url(https://s.eu.tankionline.com/606/162165/343/3/30334435362646/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*crusader*/
+.GarageItemComponentStyle-mainImg[src*="/566/43504/240/22/27310721145267/"] {
+    background-image: url(https://s.eu.tankionline.com/566/40735/240/67/27310167345113/image.webp);
+    background-position: top;
+   	background-size: contain;
+    background-repeat: no-repeat;
+}
+/*ares*/
+.GarageItemComponentStyle-mainImg[src*="/562/161140/123/251/27157463264311/"] {
+    background-image: url(https://s.eu.tankionline.com/562/161156/242/234/31331074061754/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*dictator*/
+.GarageItemComponentStyle-mainImg[src*="/602/61754/171/47/30114373154622/"] {
+    background-image: url(https://s.eu.tankionline.com/602/61754/171/47/30114373154622/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*titan*/
+.GarageItemComponentStyle-mainImg[src*="/606/26070/125/145/30305416163507/"] {
+    background-image: url(https://s.eu.tankionline.com/606/26070/125/145/30305416163507/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*shaft*/
+.GarageItemComponentStyle-mainImg[src*="/622/43505/151/101/31110721265007/"] {
+    background-image: url(https://s.eu.tankionline.com/622/43505/151/101/31110721265007/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*gauss*/
+.GarageItemComponentStyle-mainImg[src*="/611/61722/256/267/30454367266373/"] {
+    background-image: url(https://s.eu.tankionline.com/560/166470/223/123/27035516206046/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*magnum*/
+.GarageItemComponentStyle-mainImg[src*="/632/23036/322/273/31504607631061/"] {
+    background-image: url(https://s.eu.tankionline.com/632/23036/322/273/31504607631061/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*thunder*/
+.GarageItemComponentStyle-mainImg[src*="/601/112676/250/233/30062557707304/"] {
+    background-image: url(https://s.eu.tankionline.com/617/134472/113/230/30767117003724/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*striker*/
+.GarageItemComponentStyle-mainImg[src*="/626/176502/177/71/31337521147306/"] {
+    background-image: url(https://s.eu.tankionline.com/626/144362/322/210/31331074604612/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*railgun*/
+.GarageItemComponentStyle-mainImg[src*="/567/105205/202/144/27361241363510/"] {
+    background-image: url(https://s.eu.tankionline.com/567/105205/202/144/27361241363510/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*smoky*/
+.GarageItemComponentStyle-mainImg[src*="/566/114246/64/16/27323052543056/"] {
+    background-image: url(https://s.eu.tankionline.com/566/114246/64/16/27323052543056/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*scorpion*/
+.GarageItemComponentStyle-mainImg[src*="/601/17263/233/51/30043654742567/"] {
+    background-image: url(https://s.eu.tankionline.com/602/142236/225/135/30131263063453/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*twins*/
+.GarageItemComponentStyle-mainImg[src*="/575/72153/171/306/27656433310704/"] {
+    background-image: url(https://s.eu.tankionline.com/575/72153/171/306/27656433310704/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*hammer*/
+.GarageItemComponentStyle-mainImg[src*="/611/147301/37/346/30471660553063/"] {
+    background-image: url(https://s.eu.tankionline.com/611/147301/37/346/30471660553063/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*tesla*/
+.GarageItemComponentStyle-mainImg[src*="/571/164753/344/273/31254566614710/"] {
+    background-image: url(https://s.eu.tankionline.com/571/164753/344/275/27475173126262/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*isida*/
+.GarageItemComponentStyle-mainImg[src*="/605/12650/335/51/30242554322574/"] {
+    background-image: url(https://s.eu.tankionline.com/605/12650/335/51/30242554322574/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*ricochet*/
+.GarageItemComponentStyle-mainImg[src*="/603/146215/116/130/30171443247472/"] {
+    background-image: url(https://s.eu.tankionline.com/603/146215/116/130/30171443247472/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*firebird*/
+.GarageItemComponentStyle-mainImg[src*="/0/114/134/163/27571212744112/"] {
+    background-image: url(https://s.eu.tankionline.com/0/114/134/163/27571212744112/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*freeze*/
+.GarageItemComponentStyle-mainImg[src*="/575/156205/46/235/27673441764603/"] {
+    background-image: url(https://s.eu.tankionline.com/607/136170/201/132/30367436101741/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/*vulcan*/
+.GarageItemComponentStyle-mainImg[src*="/622/115017/367/224/31123203774154/"] {
+    background-image: url(https://s.eu.tankionline.com/622/115017/367/224/31123203774154/image.webp);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.GarageItemComponentStyle-mainImg:is(
+  [src*="/566/70102/323/360/27316026215470/"],
+  [src*="/574/114025/235/321/27623005403276/"],
+  [src*="/573/71447/126/60/27602130071361/"],
+  [src*="/600/67532/1/65/30015726400661/"],
+  [src*="/564/5207/367/317/27221401743427/"],
+  [src*="/567/167060/364/47/27375614310446/"],
+  [src*="/571/121327/171/265/27464265736706/"],
+  [src*="/566/43504/240/22/27310721145267/"],
+  [src*="/562/161140/123/251/27157463264311/"],
+  [src*="/602/61754/171/47/30114373154622/"],
+  [src*="/606/26070/125/145/30305416163507/"],
+  [src*="/622/43505/151/101/31110721265007/"],
+  [src*="/611/61722/256/267/30454367266373/"],
+  [src*="/632/23036/322/273/31504607631061/"],
+  [src*="/601/112676/250/233/30062557707304/"],
+  [src*="/626/176502/177/71/31337521147306/"],
+  [src*="/567/105205/202/144/27361241363510/"],
+  [src*="/566/114246/64/16/27323052543056/"],
+  [src*="/601/17263/233/51/30043654742567/"],
+  [src*="/575/72153/171/306/27656433310704/"],
+  [src*="/611/147301/37/346/30471660553063/"],
+  [src*="/571/164753/344/273/31254566614710/"],
+  [src*="/605/12650/335/51/30242554322574/"],
+  [src*="/603/146215/116/130/30171443247472/"],
+  [src*="/0/114/134/163/27571212744112/"],
+  [src*="/575/156205/46/235/27673441764603/"],
+  [src*="/622/115017/367/224/31123203774154/"]) {
+    width: 0px;
+    height: 0px;
+    padding: 5rem;
+}
 }
 
 
