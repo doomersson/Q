@@ -1009,13 +1009,12 @@ if ttw {
     position: relative;
     left: 9.55em;
 }
-.BattleTabStatisticComponentStyle-blueTeamTableContainer table thead tr th h2, .BattleTabStatisticComponentStyle-redTeamTableContainer table thead tr th h2  {
-    background-image: url(https://s.eu.tankionline.com/614/14503/60/157/30603120630427/image.svg);
+.BattleTabStatisticComponentStyle-blueTeamTableContainer table thead tr th h2, .BattleTabStatisticComponentStyle-redTeamTableContainer table thead tr th h2 {
+    background-image: url("https://s.eu.tankionline.com/614/14503/60/157/30603120630427/image.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    margin-left: 22.813em;
-    color: rgba(0, 0, 0, 0);
-    pointer-events: none;
+    background-position: right center;
+    padding-right: 18em;
 }
 .BattleTabStatisticComponentStyle-blueTeamTableContainer table thead tr th:nth-child(n+1), .BattleTabStatisticComponentStyle-redTeamTableContainer table thead tr th:nth-child(n+1), .BattleTabStatisticComponentStyle-dmTableContainer table thead tr th:nth-child(n+1) {
     pointer-events: none;
