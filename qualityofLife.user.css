@@ -46,7 +46,7 @@
 @var checkbox m1    "➡️ Modules Appear right side"      1
 @var checkbox m3    "🔄 Modules in garage Redesign"     1
 @var checkbox m2    "🤏 Compact Modules"                1
-@var checkbox mnz    "🤏 Compact Augment/Skin"           1
+@var checkbox mnz   "🤏 Compact Augment/Skin"           1
 @var checkbox c1    "🆕 New Clan Page"                  1
 @var checkbox bp1   "⚔️ Quicker Battle Pick"            0
 @var checkbox sHr   "👁️‍🗨️ Goofy ahh loading"              0
@@ -144,6 +144,14 @@ if b1 == "bokeh" {
 }
 /*Main Accents*/
 if a1 {
+::selection {
+    color: bg imp;
+    background: rgba(acc, 1) imp;
+}
+::-moz-selection {
+    color: bg imp;
+    background: rgba(acc, 1) imp;
+}
 .InvitationWindowsComponentStyle-commonItem {
     background-color: rgba(bg, 0.9);
 }
@@ -219,18 +227,23 @@ if a1 {
     background-color: acc;
     background-image: unset;
 }
-.NotificationViewStyle-progressNotification {
-    background: transparent;
-    opacity: 0.15;
-    filter: saturate(0) brightness(2);
-   /* clip-path: inset(0px 0px 0px round 15px);*/
-}
-.NotificationViewStyle-progressNotification {
-    background-color: rgba(bg, 0.3);
-    border: 0px none transparent;
-    margin-top: 0px;
-    width: inherit;
-    height: 13.25em;
+.NotificationViewStyle-commonBlockNotification {
+    background-color: rgba(bg, 0.9) imp;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 13.25em;
+    width: 28.75em;
+    height: inherit;
+    z-index: 999;
+    position: absolute;
+    margin-top: 6em;
+    right: 0.063em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-align: start;
+    -webkit-box-pack: justify;
 }
  .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter {
     background-color: rgba(acc, 0.3);
@@ -1601,6 +1614,17 @@ if mnz {
 }
 .SkinCellStyle-nameDevices {
     top: -0.5em imp;
+    }
 }
+/*sales thing*/
+.PrimaryMenuItemComponentStyle-discountNotification {
+    margin-right: 2em;
+}
+/*end screen opacity*/
+.BattleFinishStyle-container { 
+    background: rgba(0, 0, 0, 0) imp; 
+}
+.ScrollBarStyle-leftScrollArrow, .ScrollBarStyle-rightScrollArrow {
+    background: transparent;
 }
 }
