@@ -51,6 +51,7 @@
 @var checkbox bp1   "⚔️ Quicker Battle Pick"            0
 @var checkbox sHr   "👁️‍🗨️ Goofy ahh loading"              0
 @var checkbox XT    "🏆 Swap garage assets for XT"      0
+@var checkbox cnot  "stupid chat notification that doesnt go away after you checked, remember to turn off after server reset"    0
 
 ==/UserStyle== */
 imp =  !important
@@ -67,17 +68,20 @@ html {
     filter: saturate(st) brightness(br);
 }
 .BattleTabStatisticComponentStyle-blueTeamTableContainer table tbody {
-    --row-background-color: rgba(0, 212, 255, .15) imp;
-    --selected-row-background-color: rgba(acc .25) imp;
+    --row-background-color: rgba(0, 101, 122, .15) imp;
+    --selected-row-background-color: rgba(acc, .20) imp;
 }
 .BattleTabStatisticComponentStyle-redTeamTableContainer table tbody {
-    --row-background-color: rgba(255, 0, 0, .15) imp;
+    --row-background-color: rgba(135, 0, 0, .15) imp;
     --selected-row-background-color: rgba(254, 102, 102, 0.25) imp;
 }
 
 /*Background*/
 .wrapper {
     background: radial-gradient(50% 100% at 50% 100%, rgb(0, 0, 0) 0%, rgb(0 0 0) 100%);
+}
+.SaleByKitStyle-commonBlockModal {
+    background: radial-gradient(rgba(bg, 0.9) 0%, #000 100%);
 }
 if b1 == "radial" {
 .Common-container, .NewsComponentStyle-newsWindow, .ItemDescriptionComponentStyle-commonBlockModal, .UserProgressComponentStyle-modalWrapper, .DialogContainerComponentStyle-container,
@@ -151,6 +155,9 @@ if a1 {
 ::-moz-selection {
     color: bg imp;
     background: rgba(acc, 1) imp;
+}
+.UserInfoContainerStyle-textDecoration {
+    color: acc;
 }
 .InvitationWindowsComponentStyle-commonItem {
     background-color: rgba(bg, 0.9);
@@ -1625,5 +1632,11 @@ if mnz {
 }
 .ScrollBarStyle-leftScrollArrow, .ScrollBarStyle-rightScrollArrow {
     background: transparent;
+}
+if cnot {
+/*hide chat notification*/
+.FooterComponentStyle-footer li + .FooterComponentStyle-containerMenu img {
+    display: none;
+}
 }
 }
