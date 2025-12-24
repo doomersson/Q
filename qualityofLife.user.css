@@ -48,7 +48,7 @@
 @var checkbox m2    "🤏 Compact Modules"                1
 @var checkbox mnz   "🤏 Compact Augment/Skin"           1
 @var checkbox c1    "🆕 New Clan Page"                  1
-@var checkbox bp1   "⚔️ Quicker Battle Pick"            0
+@var checkbox bp1   "⚔️ Larger Battle Picker"            0
 @var checkbox sHr   "👁️‍🗨️ Goofy ahh loading"              0
 @var checkbox XT    "🏆 Swap garage assets for XT"      0
 @var checkbox cnot  "stupid chat notification that doesnt go away after you checked, remember to turn off after server reset"    0
@@ -564,9 +564,7 @@ if hk == "default" {
 /*Battle Picker*/
 if bp1 {
 .BattlePickComponentStyle-modeCards {
-    position: relative;
-    right: 22%;
-    bottom: 6.3em;
+    font-size: 1.7em;
     }
 }
 /*Bottom Right Client Info*/
@@ -690,7 +688,7 @@ if c1 {
 .ClanInfoComponentStyle-messageClan {
     background-color: rgba(255, 255, 255, 0) imp;
     box-shadow: rgba(255, 255, 255, .26) 0em 0em 0em 1px imp;
-    max-height: 48.65em;
+    max-height: 40.65em;
 }
 .ClanHeaderComponentStyle-logo {
     mask-image: url(/play/static/images/logo.e64f36db.svg);
@@ -810,7 +808,7 @@ else {
         .MatchmakingWaitComponentStyle-container {
             background-image: linear-gradient(90deg,bg, black) imp;
             box-shadow: inset .3em 0 acc, inset -.3em 0 acc imp;
-            border-radius: bor imp;
+            corner-shape: scoop;
         }
     }
 }
@@ -1162,7 +1160,7 @@ if XT {
 }
 /*hunter*/
 .MountedItemsStyle-itemPreview[src*="/567/167060/364/47/27375614310446/"] {
-    background-image: url(https://pages.tankionline.com/images/winter-major-2025/hunter-sp.png);
+    background-image: url(https://s.eu.tankionline.com/632/72364/102/227/31516475423716/image.webp);
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1387,7 +1385,7 @@ url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp);
 }
 /*hunter*/
 .GarageItemComponentStyle-mainImg[src*="/567/167060/364/47/27375614310446/"] {
-    background-image: url(https://pages.tankionline.com/images/winter-major-2025/hunter-sp.png);
+    background-image: url(https://s.eu.tankionline.com/632/72364/102/227/31516475423716/image.webp);
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1637,6 +1635,6 @@ if cnot {
 /*hide chat notification*/
 .FooterComponentStyle-footer li + .FooterComponentStyle-containerMenu img {
     display: none;
-}
+    }
 }
 }
