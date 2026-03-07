@@ -90,7 +90,7 @@ if b1 == "radial" {
     }
 }
 if b1 == "linear" {  
-.Common-container, .NewsComponentStyle-newsWindow, .ItemDescriptionComponentStyle-commonBlockModal, .UserProgressComponentStyle-modalWrapper, .DialogContainerComponentStyle-container,
+.-container ,.Common-container, .NewsComponentStyle-newsWindow, .ItemDescriptionComponentStyle-commonBlockModal, .UserProgressComponentStyle-modalWrapper, .DialogContainerComponentStyle-container,
 .LobbyLoaderComponentStyle-container, .NewShopCommonComponentStyle-commonContainer, .ClanInvitationsComponentStyle-invitationContent, .TutorialModalComponentStyle-contentWrapper, .ClanCommonStyle-content {
     background: linear-gradient(360deg, bg, #000);
     }
@@ -226,7 +226,7 @@ if a1 {
 .MainScreenComponentStyle-containerPanel > .UserScoreComponentStyle-blockRightPanel > .Common-flexCenterAlignCenter > .Common-maskImageContain, .MainScreenComponentStyle-containerPanel > .UserScoreComponentStyle-blockRightPanel > .BreadcrumbsComponentStyle-logout > .BreadcrumbsComponentStyle-iconLogout, .BreadcrumbsComponentStyle-rightButtonsContainer > .Common-flexCenterAlignCenter > div, .BreadcrumbsComponentStyle-rightButtonsContainer > .BreadcrumbsComponentStyle-exitGameButton > .IconStyle-iconLogOff, .BreadcrumbsComponentStyle-backButton > .IconStyle-iconBackArrow {
     background-color: acc;
 }
-.MainScreenComponentStyle-containerForMenuGradient > .Common-displayFlex > .MainScreenComponentStyle-buttonPlay > .Common-backgroundImageContain {
+.MainScreenComponentStyle-containerForMenuGradient > .-displayFlex > .MainScreenComponentStyle-buttonPlay > .-backgroundImageContain {
     mask-image: url("/play/static/images/lockButtonPlay.4bb62c08.svg");
     mask-size: contain;
     mask-position: center;
@@ -379,12 +379,12 @@ if a1 {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.313em 1.25em 0px;
     outline: rgba(255, 255, 255, 0.25) solid 0.063em;
     }
-.UserInfoContainerStyle-containerProgressMainScreen > .Common-flexStartAlignStartColumn:after {
+.UserInfoContainerStyle-containerProgressMainScreen > .-flexStartAlignStartColumn:after {
     background: acc;
     box-shadow: acc 0em 0em 1px 0px;
     border-radius: 0em;
     }
-.UserInfoContainerStyle-containerProgressMainScreen > .Common-flexStartAlignStartColumn {
+.UserInfoContainerStyle-containerProgressMainScreen > .-flexStartAlignStartColumn {
     background: rgba(255,255,255,.31);
     border-radius: 0em;
     }
@@ -399,7 +399,7 @@ if a1 {
 .ItemDescriptionComponentStyle-blockButtons span,
 .TankParametersStyle-parametersBlockGear span,
 .PrimaryMenuItemComponentStyle-itemCommonLi:hover .PrimaryMenuItemComponentStyle-itemName,
-.Common-activeMenu,.ProBattlesComponentStyle-createBattleButton,
+.-activeMenu,.ProBattlesComponentStyle-createBattleButton,
 .MenuComponentStyle-mainMenuItem:hover,
 .UserInfoContainerStyle-containerProgressMainScreen > .UserInfoContainerStyle-containerParameterProgress > .UserInfoContainerStyle-progressValue > span {
     color: acc;
@@ -414,11 +414,11 @@ if a1 {
     width: 1.25em;
     filter: blur(4px);
     }
-.Common-activeMenu:hover {
+.-activeMenu:hover {
     color: acc;
     filter: brightness(130%);
     }
-.Common-activeMenu.Common-flexCenterAlignCenter.Common-whiteSpaceNoWrap {
+.-activeMenu.-flexCenterAlignCenter.-whiteSpaceNoWrap {
     background-color: rgba(255, 255, 255, .12);
     border-radius: 0.3em;
     text-shadow: acc 0px 0px 0.507em;
@@ -429,7 +429,7 @@ if a1 {
     mask-repeat: no-repeat;
     filter: drop-shadow(0 0 1px acc)  imp;
     }
-.Common-menuItemActive {
+.-menuItemActive {
     background-color: acc imp;
     box-shadow: acc 0em 0em 0.375em;
     filter: drop-shadow(acc 0em 0em 0.375em);
@@ -518,18 +518,18 @@ if hk == "hka" {
     background-color: acc;
     filter: brightness(130%); 
     }
-.HotKey-commonBlockForHotKey {
+.-commonBlockForHotKey {
     background-color: acc;
     color: #1f1f1f;
     }
-.HotKey-commonBlockForHotKey:hover, .BreadcrumbsComponentStyle-backButton h3:hover {
+.-commonBlockForHotKey:hover, .BreadcrumbsComponentStyle-backButton h3:hover {
     background-color: acc;
     color: #1f1f1f;
     filter: brightness(130%);
     }
 }
 if hk == "hkd" {
-    .HotKey-commonBlockForHotKey,.ProBattlesComponentStyle-createBattleButton h3,.BreadcrumbsComponentStyle-backButton h3 {
+    .-commonBlockForHotKey,.ProBattlesComponentStyle-createBattleButton h3,.BreadcrumbsComponentStyle-backButton h3 {
     background-image: linear-gradient(#1d1d1d, #000) imp;
     color: rgb(255, 255, 255) imp;
     box-shadow: rgba(255, 255, 255, .26) 0em 0em 0em 1px imp;
@@ -619,7 +619,7 @@ if b2 == "default" {
     backdrop-filter: blur(0em);
 }
 /*Garage arrows transparent*/
-.ListItemsComponentStyle-itemsListContainer.CssCommonAnimations-appearFromBottom .Common-flexCenterAlignCenter {
+.ListItemsComponentStyle-itemsListContainer .-flexCenterAlignCenter {
     background: #0000  imp;
 }
 /*that dumb festive mode button showing a little yellow is now gone*/
@@ -651,8 +651,9 @@ if m2  {
 }
 if m1 {
 /*Modules appear rightside in garage*/
-.CssCommonAnimations-appearFromLeft {
+.-appearFromLeft {
     animation: fadeInFromRight 0.2s ease-out;
+    right: 0rem;
 }
 .Common-flexStartAlignStartColumn {
     right: 0rem  imp; 
@@ -666,11 +667,11 @@ if m1 {
 }
 if m3 {
 /*Modules redesigned*/
-.MountedItemsStyle-commonForCellResistenceName.Common-backgroundImage,
-.GarageProtectionsComponentStyle-mountedResistActive,.GarageProtectionsComponentStyle-mountedResist {
+.MountedItemsStyle-commonForCellResistenceName.-backgroundImage,
+.GarageProtectionsComponentStyle-mountedResistActive, .GarageProtectionsComponentStyle-mountedResist {
     background-image: url(/play/static/images/protectionSlotEmpty.f0a3082e.svg)  imp;
 }
-.MountedItemsStyle-commonForCellResistenceName.Common-backgroundImage:hover, .GarageProtectionsComponentStyle-mountedResistActive:hover,.GarageProtectionsComponentStyle-mountedResist:hover {
+.MountedItemsStyle-commonForCellResistenceName.-backgroundImage:hover, .GarageProtectionsComponentStyle-mountedResistActive:hover,.GarageProtectionsComponentStyle-mountedResist:hover {
     background-image: url(/play/static/images/hoverProtectionEmptySlot.a0889570.svg)  imp;
 }
 }
@@ -907,7 +908,7 @@ if bR {
 .Common-itemStyle.garage-item,
 .Common-itemStyle.garage-item:hover,
 .Common-buttonQE,
-.HotKey-commonBlockForHotKey,
+.-commonBlockForHotKey,
 .ProBattlesComponentStyle-createBattleButton h3,
 .BreadcrumbsComponentStyle-backButton h3
 
@@ -937,7 +938,7 @@ if bR {
 .TableMainQuestComponentStyle-cardRewardGivenTable,
 .ScrollingCardsComponentStyle-scrollCard,
 .Common-flexStartAlignCenter.Common-flexWrapNowrap.modeLimitIcon, 
-.Common-activeMenu.Common-flexCenterAlignCenter.Common-whiteSpaceNoWrap,
+.-activeMenu.-flexCenterAlignCenter.-whiteSpaceNoWrap,
 .DialogContainerComponentStyle-container,
 .ConverterDialogComponentStyle-modal,
 .FriendListComponentStyle-blockList:has(.FriendListComponentStyle-greenTextOnline),
