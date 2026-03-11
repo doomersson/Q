@@ -481,14 +481,14 @@ if a1 {
 .MainScreenComponentStyle-playButtonContainer span {
     text-shadow: acc 0px 0px 0.625em;
     }
-.Common-flexSpaceBetweenAlignCenterColumn.descriptionMode.blockCard:hover {
+.-flexSpaceBetweenAlignCenterColumn.descriptionMode.blockCard:hover {
     position: relative;
     transition-delay: 0s;
     box-shadow: acc 0 0 0 0.125em  imp;
     background: transparent;
     overflow: hidden;
     }
-.Common-flexSpaceBetweenAlignCenterColumn.descriptionMode.blockCard:hover::before {
+.-flexSpaceBetweenAlignCenterColumn.descriptionMode.blockCard:hover::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -496,7 +496,7 @@ if a1 {
     opacity: 0.4;
     pointer-events: none;
     }
-.blockCard:hover .Common-flexCenterAlignCenter {
+.blockCard:hover .-flexCenterAlignCenter {
     background-color: acc imp;
     }
 .Common-flexSpaceBetweenAlignCenterColumn.descriptionMode.blockCard {
@@ -511,10 +511,10 @@ if a1 {
 /*Hotkeys*/
 
 if hk == "hka" {
-.Common-buttonQE, .BreadcrumbsComponentStyle-backButton h3, .ProBattlesComponentStyle-createBattleButton h3  {
+.-buttonQE, .BreadcrumbsComponentStyle-backButton h3, .ProBattlesComponentStyle-createBattleButton h3  {
     background-color: acc;
     }
-.Common-buttonQE:hover {
+.-buttonQE:hover {
     background-color: acc;
     filter: brightness(130%); 
     }
@@ -534,7 +534,7 @@ if hk == "hkd" {
     color: rgb(255, 255, 255) imp;
     box-shadow: rgba(255, 255, 255, .26) 0em 0em 0em 1px imp;
 }
-.Common-buttonQE  {
+.-buttonQE  {
     background-image: linear-gradient(#d0d0d0, #fff) imp;
     box-shadow: rgba(0, 0, 0, .26) 0em 0em 0em 1px imp;
     filter: invert(1)!important;
@@ -905,9 +905,9 @@ if b3 == "ngd" {
 }
 if bR {
 /*borders*/
-.Common-itemStyle.garage-item,
-.Common-itemStyle.garage-item:hover,
-.Common-buttonQE,
+.-itemStyle.garage-item,
+.-itemStyle.garage-item:hover,
+.-buttonQE,
 .-commonBlockForHotKey,
 .ProBattlesComponentStyle-createBattleButton h3,
 .BreadcrumbsComponentStyle-backButton h3
@@ -921,8 +921,8 @@ if bR {
 .TableMainQuestComponentStyle-colorLockedGradientTable,
 .TooltipStyle-tooltip,
 .BattlePassLobbyComponentStyle-blockBattlePass,
-.BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter,
-.Common-flexCenterAlignCenterColumn.shop-item-component,
+.BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .-flexCenterAlignCenter,
+.-flexCenterAlignCenterColumn.shop-item-component,
 .TanksPartComponentStyle-amountItems,
 .BattleTabStatisticComponentStyle-containerInsideTeams::before, .BattleTabStatisticComponentStyle-container.tt-expanded>.BattleTabStatisticComponentStyle-containerInsideTeams::before,
 :is(.BattleTabStatisticComponentStyle-container>:first-child)>.tt-background::before,
@@ -937,7 +937,7 @@ if bR {
 .TableMainQuestComponentStyle-commonTableMainQuest,
 .TableMainQuestComponentStyle-cardRewardGivenTable,
 .ScrollingCardsComponentStyle-scrollCard,
-.Common-flexStartAlignCenter.Common-flexWrapNowrap.modeLimitIcon, 
+.-flexStartAlignCenter.-flexWrapNowrap.modeLimitIcon, 
 .-activeMenu.-flexCenterAlignCenter.-whiteSpaceNoWrap,
 .DialogContainerComponentStyle-container,
 .ConverterDialogComponentStyle-modal,
