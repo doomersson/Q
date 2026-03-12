@@ -217,7 +217,7 @@ if a1 {
     background-color: rgba(acc, 0.1) imp;
 }
 .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter > .Common-flexCenterAlignCenter:hover
-.ProBattlesComponentStyle-mainContainer .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter .Common-flexCenterAlignCenter > .Common-maskImageContain {
+.ProBattlesComponentStyle-mainContainer .BattleModesComponentStyle-blockModesFilter.ProBattleCommonStyleMobile-blockModesFilter .Common-flexCenterAlignCenter > .Common-maskImageContain{
     background-color: acc;
 }
 
@@ -314,7 +314,14 @@ if a1 {
     opacity: 0.4; /* 40% */
     pointer-events: none;
 }
-
+.MainQuestComponentStyle-cardRewardCompleted {
+    background-color: rgba(acc, 0.15);
+    box-shadow: rgba(acc, 0.25) 0px 0px 0px 0.063em;
+}
+.MainQuestComponentStyle-cardPlayCommon, .MainQuestComponentStyle-cardPlay {
+    background-color: rgba(acc, .03);
+    box-shadow: rgba(acc, 0.25) 0px 0px 0px 0.063em;
+}
 /*friends list*/
 .FriendListComponentStyle-buttonAddFriends img {
     filter: brightness(0) invert(1) imp;
@@ -401,7 +408,9 @@ if a1 {
 .PrimaryMenuItemComponentStyle-itemCommonLi:hover .PrimaryMenuItemComponentStyle-itemName,
 .-activeMenu,.ProBattlesComponentStyle-createBattleButton,
 .MenuComponentStyle-mainMenuItem:hover,
-.UserInfoContainerStyle-containerProgressMainScreen > .UserInfoContainerStyle-containerParameterProgress > .UserInfoContainerStyle-progressValue > span {
+.UserInfoContainerStyle-containerProgressMainScreen > .UserInfoContainerStyle-containerParameterProgress > .UserInfoContainerStyle-progressValue > span
+.-flexCenterAlignCenterColumn h4
+.MainQuestComponentStyle-messageReward[class*="ksc"]{
     color: acc;
     }
 .SuperMissionComponentStyle-conditionContextItems img {
@@ -894,7 +903,8 @@ if b3 == "ngd" {
 .TableMainQuestComponentStyle-progressTableMission {
     position: relative;
 }
-.TableMainQuestComponentStyle-progressTableMission::after {
+.TableMainQuestComponentStyle-progressTableMission::after,
+.MainQuestComponentStyle-progress::after {
     content: "";
     position: absolute;
     inset: 0;
