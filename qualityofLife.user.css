@@ -20,6 +20,7 @@
 }
 @advanced color bg "Background Color" rgba(32, 48, 64, 1)
 @var checkbox a1    "🔴 Toggle Accents"      1
+@var checkbox fps1  "  FPS and PING accented"    1
 @advanced color acc "  Accents" rgba(203, 172, 123, 1)
 @var            checkbox   cf                   "🔎 Enable custom screen size"       0
 @var            range      fontSize             "  Screen Size"                  [72, 50, 100, "%"]
@@ -158,6 +159,11 @@ if a1 {
 .-flexCenterAlignCenterColumn.shop-item-component {
     background-color: rgba(acc, 0.15) imp;
     box-shadow: rgba(acc, 0.3) 0em 0em 0em 1px imp;
+}
+    if fps1 {
+    .BattleHudFpsComponentStyle-value{
+        color: acc imp;
+    }
 }
 img:is([src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]) {
     width: 0px;
@@ -320,19 +326,7 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
 }
 .TableMainQuestComponentStyle-cardRewardCompletedTable:active {
     box-shadow: acc 0px 0px 0px 2px;
-    animation: 0.5s linear 0s 1 normal none running trash;
-}
-@keyframes trash{
-    0% {
-    filter: grayscale(0.5);
-}
-
-    10% {
     filter: grayscale(1);
-}
-    100% {
-    filter: grayscale(0.5);
-}
 }
 .TableMainQuestComponentStyle-cardRewardCompletedTable {
     background: transparent;
@@ -439,20 +433,20 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
     background: radial-gradient(50% 100% at 50% 100%, bg 0%, rgb(0, 0, 0) 100%);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.313em 1.25em 0px;
     outline: rgba(255, 255, 255, 0.25) solid 0.063em;
-    }
+}
 .UserInfoContainerStyle-containerProgressMainScreen > .-flexStartAlignStartColumn:after {
     background: acc;
     box-shadow: acc 0em 0em 1px 0px;
     border-radius: 0em;
-    }
+}
 .UserInfoContainerStyle-containerProgressMainScreen > .-flexStartAlignStartColumn {
-    background: rgba(255,255,255,.31);
+    background: rgba(acc,.31);
     border-radius: 0em;
-    }
+}
 .UserInfoContainerStyle-progressValue {
     font-family: 'BaseFontBold';
     color: acc;
-    }
+}
 .SuperMissionComponentStyle-conditionContextItems img {
     mask-image: url(/play/static/images/notification_correct.8382464c.svg);
     mask-repeat: no-repeat;
