@@ -43,17 +43,18 @@
     "b3:Dark*": "hkd",
     "c3:Accent": "hka"
 }
-@var checkbox clin  "❌ No Client Info"                 0
-@var checkbox m1    "➡️ Modules Appear right side"      1
-@var checkbox m3    "🔄 Modules in garage Redesign"     1
-@var checkbox gc1   "2️⃣ Garage items in two rows"       1
-@var checkbox m2    "🤏 Compact Modules"                1
-@var checkbox mnz   "🤏 Compact Augment/Skin"           1
-@var checkbox c1    "🆕 New Clan Page"                  1
-@var checkbox bp1   "⚔️ Larger Battle Picker"            0
-@var checkbox sHr   "👁️‍🗨️ Goofy ahh loading"              0
-@var checkbox XT    "🏆 Swap garage assets for XT"      0
-@var checkbox cnct  "📝 Contract first in mission order"    0
+@var checkbox clin  "❌ No Client Info"                   0
+@var checkbox m1    "➡️ Modules Appear right side"        1
+@var checkbox m3    "🔄 Modules in garage Redesign"       1
+@var checkbox gc1   "2️⃣ Garage items in two rows"         1
+@var checkbox m2    "🤏 Compact Modules"                  1
+@var checkbox mnz   "🤏 Compact Augment/Skin"             1
+@var checkbox c1    "🆕 New Clan Page"                    1
+@var checkbox bp1   "⚔️ Larger Battle Picker"             0
+@var checkbox sHr   "👁️‍🗨️ Goofy ahh loading"                0
+@var checkbox XT    "🏆 Swap garage assets for XT"        0
+@var checkbox cnct  "📝 Contract first in mission order"  0
+@var checkbox tpg   "🪟 Garage selection transparent"     0
 
 ==/UserStyle== */
 imp =  !important
@@ -1714,6 +1715,11 @@ if mnz {
 }
 .ScrollBarStyle-leftScrollArrow, .ScrollBarStyle-rightScrollArrow {
     background: transparent;
+}
+if tpg {
+.-itemStyle {
+    background-color: rgba(0, 0, 0, 0) imp;
+    }
 }
 if cnct{
     .ScrollingCardsComponentStyle-scrollCardPick > :nth-last-child(2) {
