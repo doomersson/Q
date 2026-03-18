@@ -40,12 +40,13 @@
 
 @advanced select hk "#️⃣ Hotkeys" {
     "a3:Default": "default",
-    "b3:Dark": "hkd",
-    "c3:Accent*": "hka"
+    "b3:Dark*": "hkd",
+    "c3:Accent": "hka"
 }
 @var checkbox clin  "❌ No Client Info"                 0
 @var checkbox m1    "➡️ Modules Appear right side"      1
 @var checkbox m3    "🔄 Modules in garage Redesign"     1
+@var checkbox gc1   "2️⃣ Garage items in two rows"       1
 @var checkbox m2    "🤏 Compact Modules"                1
 @var checkbox mnz   "🤏 Compact Augment/Skin"           1
 @var checkbox c1    "🆕 New Clan Page"                  1
@@ -142,10 +143,6 @@ if b1 == "bokeh" {
     mask-image: url("/play/static/images/gradient.a9e5f61b.svg");
     background: bg imp;
 }
-/*container keys poof*/
-.ContainersComponentStyle-keyBlock {
-    display: none;
-}
 /*Main Accents*/
 if a1 {
 ::selection {
@@ -176,6 +173,9 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
     mask-size: contain;
     mask-position: center;
     background: acc;
+}
+.-flexStartAlignCenter.-flexWrapNowrap.modeLimitIcon {
+    background-color: rgba(acc, .15);
 }
 .TanksPartBaseComponentStyle-marginTop.TanksPartBaseComponentStyle-marginTop{
     background: radial-gradient(50% 100% at 50% 0%, rgba(acc, 0.25) 0%, rgba(acc, 0) 100%) transparent;
@@ -692,6 +692,21 @@ if m2  {
     height: auto;
 }
 }
+if gc1  {
+.ListItemsComponentStyle-itemsContainer {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    gap: 6px 0px;
+    height: auto;
+}
+.ListItemsComponentStyle-itemsContainer > * {
+    flex-direction: row;
+    width: fit-content;
+    gap: 0.625em;
+    height: 9.375em;
+}
+}
 if m1 {
 /*Modules appear rightside in garage*/
 .-appearFromLeft {
@@ -846,9 +861,27 @@ if ttw {
 .BattleResultNavigationComponentStyle-commonBlockButtonNextLeave > :first-child {
     margin-bottom:0 imp;
     margin-right:.5em imp
-    }
+}
+/*MM loading*/
+.MatchmakingWaitComponentStyle-container {
+    background-image: unset;
+}
+.MatchmakingWaitComponentStyle-container::before {
+    content: "";
+    background: linear-gradient(to right, rgba(bg, 0.9), rgb(0, 0, 0));
+    border-radius: 0 0px 0 40px / 0 0px 0 120px;
+    box-shadow: -5px 0 0 0 rgba(acc, 0.5);
+    corner-bottom-left-shape: bevel;
+    position: absolute;
+    right: -0.45em;
+    top: -1.96em;
+    width: 34.25em;
+    height: 11em;
+    z-index: -1;
+}
 }
 else {
+
     if a1 {
         .MatchmakingWaitComponentStyle-container {
             background-image: linear-gradient(90deg,bg, black) imp;
