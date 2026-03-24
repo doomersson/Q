@@ -1291,21 +1291,21 @@ if XT {
 }
 /*shaft*/
 .MountedItemsStyle-itemPreview[src*="/622/43505/151/101/31110721265007/"] {
-    background-image: url(https://s.eu.tankionline.com/622/43505/151/101/31110721265007/image.webp);
+    background-image: url("https://s.eu.tankionline.com/622/115027/356/340/31123205770464/image.webp");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
 }
 /*gauss*/
 .MountedItemsStyle-itemPreview[src*="/611/61722/256/267/30454367266373/"] {
-    background-image: url(https://s.eu.tankionline.com/560/166470/223/123/27035516206046/image.webp);
+    background-image: url("https://s.eu.tankionline.com/560/166470/223/123/27035516206046/image.webp");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
 }
 /*magnum*/
 .MountedItemsStyle-itemPreview[src*="/632/23036/322/273/31504607631061/"] {
-    background-image: url(https://s.eu.tankionline.com/632/23036/322/273/31504607631061/image.webp);
+    background-image: url("https://s.eu.tankionline.com/632/76146/224/361/31517431551253/image.webp");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1347,7 +1347,7 @@ if XT {
 }
 /*twins*/
 .MountedItemsStyle-itemPreview[src*="/575/72153/171/306/27656433310704/"] {
-    background-image: url(https://s.eu.tankionline.com/575/72153/171/306/27656433310704/image.webp);
+    background-image: url("https://s.eu.tankionline.com/607/24074/235/2/30345017117777/image.webp");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1375,7 +1375,7 @@ if XT {
 }
 /*ricochet*/
 .MountedItemsStyle-itemPreview[src*="/603/146215/116/130/30171443247472/"] {
-    background-image: url(https://s.eu.tankionline.com/603/146215/116/130/30171443247472/image.webp);
+    background-image: url("https://s.eu.tankionline.com/577/177107/117/226/27777622231563/image.webp");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1396,7 +1396,7 @@ if XT {
 }
 /*vulcan*/
 .MountedItemsStyle-itemPreview[src*="/622/115017/367/224/31123203774154/"] {
-    background-image: url(https://s.eu.tankionline.com/622/115017/367/224/31123203774154/image.webp);
+    background-image: url("https://s.eu.tankionline.com/613/14030/7/251/30543006303434/image.webp");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1516,7 +1516,7 @@ url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp);
 }
 /*shaft*/
 .GarageItemComponentStyle-mainImg[src*="/622/43505/151/101/31110721265007/"] {
-    background-image: url(https://s.eu.tankionline.com/622/43505/151/101/31110721265007/image.webp);
+    background-image: url("https://s.eu.tankionline.com/622/115027/356/340/31123205770464/image.webp");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1530,7 +1530,7 @@ url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp);
 }
 /*magnum*/
 .GarageItemComponentStyle-mainImg[src*="/632/23036/322/273/31504607631061/"] {
-    background-image: url(https://s.eu.tankionline.com/632/23036/322/273/31504607631061/image.webp);
+    background-image: url("https://s.eu.tankionline.com/632/76146/224/361/31517431551253/image.webp");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1572,7 +1572,7 @@ url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp);
 }
 /*twins*/
 .GarageItemComponentStyle-mainImg[src*="/575/72153/171/306/27656433310704/"] {
-    background-image: url(https://s.eu.tankionline.com/575/72153/171/306/27656433310704/image.webp);
+    background-image: url("https://s.eu.tankionline.com/607/24074/235/2/30345017117777/image.webp");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1600,7 +1600,7 @@ url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp);
 }
 /*ricochet*/
 .GarageItemComponentStyle-mainImg[src*="/603/146215/116/130/30171443247472/"] {
-    background-image: url(https://s.eu.tankionline.com/603/146215/116/130/30171443247472/image.webp);
+    background-image: url("https://s.eu.tankionline.com/577/177107/117/226/27777622231563/image.webp");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1621,7 +1621,7 @@ url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp);
 }
 /*vulcan*/
 .GarageItemComponentStyle-mainImg[src*="/622/115017/367/224/31123203774154/"] {
-    background-image: url(https://s.eu.tankionline.com/622/115017/367/224/31123203774154/image.webp);
+    background-image: url("https://s.eu.tankionline.com/613/14030/7/251/30543006303434/image.webp");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -1728,7 +1728,7 @@ if tpg {
     background-color: rgba(0, 0, 0, 0) imp;
     }
 }
-if cnct{
+if cnct {
     .ScrollingCardsComponentStyle-scrollCardPick > :nth-last-child(2) {
     order: -1;
     margin-left: 2em;
