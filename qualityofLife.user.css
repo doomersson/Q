@@ -742,7 +742,7 @@ if m2  {
 }
 }
 if gc1  {
-.ListItemsComponentStyle-itemsContainer {
+.ListItemsComponentStyle-itemsContainer:not(.GarageMainScreenStyle-blockParameters:has(.GarageProtectionsComponentStyle-equipmentResistance)+div .ListItemsComponentStyle-itemsContainer) {
     display: grid;
     grid-template-rows: auto auto;
     grid-auto-flow: column;
