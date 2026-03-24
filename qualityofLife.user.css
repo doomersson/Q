@@ -585,24 +585,23 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
 }
 
 /*Hotkeys*/
-
 if hk == "hka" {
-.-buttonQE, .BreadcrumbsComponentStyle-backButton h3, .ProBattlesComponentStyle-createBattleButton h3  {
-    background-color: acc;
-    }
-.-buttonQE:hover {
-    background-color: acc;
-    filter: brightness(130%); 
-    }
-.-commonBlockForHotKey {
-    background-color: acc;
+  .-buttonQE, .BreadcrumbsComponentStyle-backButton h3, .ProBattlesComponentStyle-createBattleButton h3 {
+    background-color: (a1 ? acc : white);
+  }
+  .-buttonQE:hover {
+    background-color: (a1 ? acc : white);
+    filter: brightness(130%);
+  }
+  .-commonBlockForHotKey {
+    background-color: (a1 ? acc : white);
     color: #1f1f1f;
-    }
-.-commonBlockForHotKey:hover, .BreadcrumbsComponentStyle-backButton h3:hover {
-    background-color: acc;
+  }
+  .-commonBlockForHotKey:hover, .BreadcrumbsComponentStyle-backButton h3:hover {
+    background-color: (a1 ? acc : white);
     color: #1f1f1f;
     filter: brightness(130%);
-    }
+  }
 }
 if hk == "hkd" {
     .-commonBlockForHotKey,.ProBattlesComponentStyle-createBattleButton h3,.BreadcrumbsComponentStyle-backButton h3 {
@@ -956,38 +955,41 @@ else {
     background-repeat: no-repeat;
     width: 21.875em;
     height: 10.75em;
-}
-if b3 == "alt2" {
-.MainScreenComponentStyle-buttonPlay {
-    background-image: linear-gradient((130)deg, rgba(acc, 0.5) 0%, rgba(bg, 0.8) 70%),url(https://pages.tankionline.com/images/landings/v3/video-tanki.gif);
+}if b3 == "alt2" {
+  .MainScreenComponentStyle-buttonPlay {
+    background-image: linear-gradient(130deg, rgba((a1 ? acc : #76ff33), 0.5) 0%, rgba(bg, 0.8) 70%), url(https://pages.tankionline.com/images/landings/v3/video-tanki.gif);
     box-shadow: rgba(acc, 0.25) 0em 0em 0em 0.063em;
-    }
+  }
 }
+
 if b3 == "freeze" {
-.MainScreenComponentStyle-buttonPlay {
-    background-image: linear-gradient((130)deg,  rgba(acc, 0.5) 0%, rgba(bg, 0.8) 70%),url(https://tankionline.com/en/wp-content/uploads/2018/09/xt-freeze.gif);
+  .MainScreenComponentStyle-buttonPlay {
+    background-image: linear-gradient(130deg, rgba((a1 ? acc : #76ff33), 0.5) 0%, rgba(bg, 0.8) 70%), url(https://tankionline.com/en/wp-content/uploads/2018/09/xt-freeze.gif);
     box-shadow: rgba(acc, 0.25) 0em 0em 0em 0.063em;
-    }
+  }
 }
+
 if b3 == "ydzero" {
-.MainScreenComponentStyle-buttonPlay {
-    background-image: linear-gradient((130)deg,  rgba(acc, 0.5) 0%, rgba(bg, 0.8) 70%),url(http://tankionline.com/en/wp-content/uploads/2012/02/ydzero.gif);
+  .MainScreenComponentStyle-buttonPlay {
+    background-image: linear-gradient(130deg, rgba((a1 ? acc : #76ff33), 0.5) 0%, rgba(bg, 0.8) 70%), url(http://tankionline.com/en/wp-content/uploads/2012/02/ydzero.gif);
     box-shadow: rgba(acc, 0.25) 0em 0em 0em 0.063em;
     background-size: cover;
     background-position: bottom;
-    }
+  }
 }
+
 if b3 == "meteor" {
-.MainScreenComponentStyle-buttonPlay {
-    background-image: linear-gradient((130)deg,  rgba(acc, 0.5) 0%, rgba(bg, 0.8) 70%),url(https://tankionline.com/en/wp-content/uploads/2018/04/cosmos-meteor.gif);
+  .MainScreenComponentStyle-buttonPlay {
+    background-image: linear-gradient(130deg, rgba((a1 ? acc : #76ff33), 0.5) 0%, rgba(bg, 0.8) 70%), url(https://tankionline.com/en/wp-content/uploads/2018/04/cosmos-meteor.gif);
     box-shadow: rgba(acc, 0.25) 0em 0em 0em 0.063em;
-    }
+  }
 }
+
 if b3 == "matrix" {
-.MainScreenComponentStyle-buttonPlay {
-    background-image: linear-gradient((130)deg,  rgba(acc, 0.5) 0%, rgba(bg, 0.8) 70%),url(https://tankionline.com/play/static/images/legendPlusBg.295a98bb.gif);
+  .MainScreenComponentStyle-buttonPlay {
+    background-image: linear-gradient(130deg, rgba((a1 ? acc : #76ff33), 0.5) 0%, rgba(bg, 0.8) 70%), url(https://tankionline.com/play/static/images/legendPlusBg.295a98bb.gif);
     box-shadow: rgba(acc, 0.25) 0em 0em 0em 0.063em;
-    }
+  }
 }
 if b3 == "ngd" {
 .MainScreenComponentStyle-buttonPlay {
@@ -1001,12 +1003,10 @@ if b3 == "ngd" {
     border-radius: 0.5em imp;
     box-shadow: rgba(0, 0, 0, .25) 0em 0em 0em 0.063em imp;
     }
+}
 .MainScreenComponentStyle-playButtonContainer:hover {
     box-shadow: (a1 ? acc : #76ff33) 0em 0em 0em 2px imp;
-    background: linear-gradient(-20deg, #00000017 0%, #000 100%) imp;
-    }
 }
-
 
 
 .MainQuestComponentStyle-progress, .TableMainQuestComponentStyle-progressTableMission {
