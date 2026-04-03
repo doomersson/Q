@@ -18,6 +18,9 @@
     'Esport': 'esport',
     'Bokeh': 'bokeh'
 }
+
+@var select   b3    "▶️ Play Button Gifs"               {'Default*': 'default','Gif 2': 'alt2','Freeze': 'freeze','Ydzero': 'ydzero','Meteor': 'meteor','Matrix': 'matrix','No Gif Dark': 'ngd'}
+
 @advanced color bg "Background Color" rgba(32, 48, 64, 1)
 @var checkbox a1    "🔴 Toggle Accents"      1
 @var checkbox fps1  "  FPS and PING accented"    0
@@ -37,7 +40,7 @@
     "b2:Person*": "person",
     "c2:Smiley": "smiley"
 }
-@var select   b3    "▶️ Play Button Gifs"               {'Default*': 'default','Gif 2': 'alt2','Freeze': 'freeze','Ydzero': 'ydzero','Meteor': 'meteor','Matrix': 'matrix','No Gif Dark': 'ngd'}
+
 
 @advanced select hk "#️⃣ Hotkeys" {
     "a3:Default": "default",
@@ -52,15 +55,16 @@
 @var checkbox clin  "❌ No Client Info"                   0
 @var checkbox m1    "➡️ Modules Appear right side"        1
 @var checkbox m3    "🔄 Modules in garage Redesign"       1
-@var checkbox gc1   "2⃣ Garage items in two rows"         1
+@var checkbox gc1   "2⃣ Garage items in two rows"          1
 @var checkbox m2    "2️⃣ Compact Modules"                  1
 @var checkbox mnz   "🤏 Compact Augment/Skin"             1
 @var checkbox c1    "🆕 New Clan Page"                    1
 @var checkbox bp1   "⚔️ Larger Battle Picker"             0
-@var checkbox XT    "🏆 Swap garage assets for XT"        0
+@var checkbox XT    "🏆 Swap garage assets for Skins"     0
 @var checkbox cnct  "📝 Contract first in mission order"  0
 @var checkbox tpg   "🪟 Garage selection transparent"     0
-@var checkbox load1   "⌛ Loading transparent"             1
+@var checkbox load1  "⌛ Loading transparent"             1
+@var checkbox playt  "PLAY on Play Button is off"         0
 
 ==/UserStyle== */
 imp =  !important
@@ -167,7 +171,12 @@ if a1 {
 }
 .-flexCenterAlignCenterColumn.shop-item-component {
     background-color: rgba(acc, 0.15) imp;
-    box-shadow: rgba(acc, 0.3) 0em 0em 0em 1px imp;
+    box-shadow: rgba(acc, 0.3) 0em 0em 0em 1px;
+    transition: background 0.2s;
+}
+.-flexCenterAlignCenterColumn.shop-item-component:hover {
+    background-color: rgba(acc, 0.3) imp;
+    box-shadow: rgba(acc, 0.3) 0em 0em 0em 2px;
 }
     if fps1 {
     .BattleHudFpsComponentStyle-value{
@@ -185,6 +194,15 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
     mask-size: contain;
     mask-position: center;
     background: acc;
+}
+
+/*Chat GENERAL/PRO BATTLES*/
+.ChatComponentStyle-channelSelect.-bold.-normal {
+    background: bg;
+    color: acc;
+}
+.ChatComponentStyle-channelsSelectArrow {
+    border-color: acc transparent transparent;
 }
 /*settings bar*/
 .SettingsMenuComponentStyle-yellowLineMenuOptions {
@@ -215,6 +233,16 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
 }
 .TanksPartBaseComponentStyle-marginTop.TanksPartBaseComponentStyle-marginTop:hover{
     background: rgba(acc, 0.9);
+}
+.BattleResultQuestProgressComponentStyle-container[style*="118"] {
+    background-color: rgba(acc, 0.25) imp;
+}
+.BattleResultQuestProgressComponentStyle-text[style*="118"] {
+    color: hsl(acc+25%) imp;
+}
+.BattleResultQuestProgressComponentStyle-progressDiff {
+    background-color: white imp;
+    box-shadow: white 0px 0px 0.375rem 0px imp;
 }
 .BattleResultUserInfoComponentStyle-containerProgress .-displayFlexColumn {
     background-color: rgba(acc, 0.25);
@@ -467,12 +495,12 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
     outline: rgba(255, 255, 255, 0.25) solid 0.063em;
 }
 .UserInfoContainerStyle-containerProgressMainScreen > .-flexStartAlignStartColumn:after {
-    background: rgba(acc,.9);
+    background: rgba(acc, 0.6);
     box-shadow: acc 0em 0em 1px 0px;
     border-radius: 0em;
 }
 .UserInfoContainerStyle-containerProgressMainScreen > .-flexStartAlignStartColumn {
-    background: rgba(acc,.31);
+    background: rgba(acc,.25);
     border-radius: 0em;
 }
 .UserInfoContainerStyle-progressValue {
@@ -612,7 +640,7 @@ if hk == "hkd" {
 .-buttonQE  {
     background-image: linear-gradient(#d0d0d0, #fff) imp;
     box-shadow: rgba(0, 0, 0, .26) 0em 0em 0em 1px imp;
-    filter: invert(1)!important;
+    filter: invert(1) imp;
 }
 .HotKey-inlineBlockForHotKey {
     background-image: linear-gradient(#d0d0d0, #fff) imp;
@@ -955,24 +983,25 @@ else {
     background-repeat: no-repeat;
     width: 21.875em;
     height: 10.75em;
-}if b3 == "alt2" {
+}
+if b3 == "alt2" {
   .MainScreenComponentStyle-buttonPlay {
-    background-image: linear-gradient(130deg, rgba((a1 ? acc : #76ff33), 0.5) 0%, rgba(bg, 0.8) 70%), url(https://pages.tankionline.com/images/landings/v3/video-tanki.gif);
-    box-shadow: rgba(acc, 0.25) 0em 0em 0em 0.063em;
+    background-image: linear-gradient(90deg, rgba((a1 ? acc : #76ff33), 0.4) 0%, rgba(bg, 0.4) 100%),  url(https://pages.tankionline.com/images/landings/v3/video-tanki.gif);
+    box-shadow: rgba((a1 ? acc : #76ff33), 0.25) 0em 0em 0em 0.063em;
   }
 }
 
 if b3 == "freeze" {
   .MainScreenComponentStyle-buttonPlay {
-    background-image: linear-gradient(130deg, rgba((a1 ? acc : #76ff33), 0.5) 0%, rgba(bg, 0.8) 70%), url(https://tankionline.com/en/wp-content/uploads/2018/09/xt-freeze.gif);
-    box-shadow: rgba(acc, 0.25) 0em 0em 0em 0.063em;
+    background-image: linear-gradient(90deg, rgba((a1 ? acc : #76ff33), 0.4) 0%, rgba(bg, 0.4) 100%),  url(https://tankionline.com/en/wp-content/uploads/2018/09/xt-freeze.gif);
+    box-shadow: rgba((a1 ? acc : #76ff33), 0.25) 0em 0em 0em 0.063em;
   }
 }
 
 if b3 == "ydzero" {
   .MainScreenComponentStyle-buttonPlay {
-    background-image: linear-gradient(130deg, rgba((a1 ? acc : #76ff33), 0.5) 0%, rgba(bg, 0.8) 70%), url(http://tankionline.com/en/wp-content/uploads/2012/02/ydzero.gif);
-    box-shadow: rgba(acc, 0.25) 0em 0em 0em 0.063em;
+    background-image: linear-gradient(90deg, rgba((a1 ? acc : #76ff33), 0.4) 0%, rgba(bg, 0.4) 100%), url(http://tankionline.com/en/wp-content/uploads/2012/02/ydzero.gif);
+    box-shadow: rgba((a1 ? acc : #76ff33), 0.25) 0em 0em 0em 0.063em;
     background-size: cover;
     background-position: bottom;
   }
@@ -980,15 +1009,15 @@ if b3 == "ydzero" {
 
 if b3 == "meteor" {
   .MainScreenComponentStyle-buttonPlay {
-    background-image: linear-gradient(130deg, rgba((a1 ? acc : #76ff33), 0.5) 0%, rgba(bg, 0.8) 70%), url(https://tankionline.com/en/wp-content/uploads/2018/04/cosmos-meteor.gif);
-    box-shadow: rgba(acc, 0.25) 0em 0em 0em 0.063em;
+    background-image: linear-gradient(90deg, rgba((a1 ? acc : #76ff33), 0.4) 0%, rgba(bg, 0.4) 100%),  url(https://tankionline.com/en/wp-content/uploads/2018/04/cosmos-meteor.gif);
+    box-shadow: rgba((a1 ? acc : #76ff33), 0.25) 0em 0em 0em 0.063em;
   }
 }
 
 if b3 == "matrix" {
   .MainScreenComponentStyle-buttonPlay {
-    background-image: linear-gradient(130deg, rgba((a1 ? acc : #76ff33), 0.5) 0%, rgba(bg, 0.8) 70%), url(https://tankionline.com/play/static/images/legendPlusBg.295a98bb.gif);
-    box-shadow: rgba(acc, 0.25) 0em 0em 0em 0.063em;
+    background-image: linear-gradient(90deg, rgba((a1 ? acc : #76ff33), 0.4) 0%, rgba(bg, 0.4) 100%), url(https://tankionline.com/play/static/images/legendPlusBg.295a98bb.gif);
+    box-shadow: rgba((a1 ? acc : #76ff33), 0.25) 0em 0em 0em 0.063em;
   }
 }
 if b3 == "ngd" {
@@ -1002,6 +1031,12 @@ if b3 == "ngd" {
     background: linear-gradient(-30deg, #00000017 0%, #000 100%) imp; 
     border-radius: 0.5em imp;
     box-shadow: rgba(0, 0, 0, .25) 0em 0em 0em 0.063em imp;
+    }
+}
+if playt { /*PLAY on playbutton is transparent*/
+.MainScreenComponentStyle-playButtonContainer span {
+    color: rgba(255, 255, 255, 0);
+    text-shadow: rgba(acc, 0) 0px 0px 0.625em;
     }
 }
 .MainScreenComponentStyle-playButtonContainer:hover {
@@ -1076,10 +1111,11 @@ if bR {
 }
 }
 /*battle tab*/
+
 .BattleTabStatisticComponentStyle-container>:first-child,
 .BattleTabStatisticComponentStyle-containerInsideTeams, .BattleTabStatisticComponentStyle-container.tt-expanded>.BattleTabStatisticComponentStyle-containerInsideTeams, :is(.BattleTabStatisticComponentStyle-container>:first-child)>.tt-background {
     position: relative imp;
-    background-color: rgba(0, 0, 0, .5) imp;
+    background-color: rgba(btc, .5) imp;
     box-shadow: btc 0em 0em 3px;
     overflow: hidden imp;
     opacity: 0.999 imp;
@@ -1107,7 +1143,7 @@ if ttw {
     width: 47.125em;
 }
 .BattleTabStatisticComponentStyle-commonBlock, .BattleTabStatisticComponentStyle-blueTeamTableContainer table tbody tr td:nth-child(n+3), .BattleTabStatisticComponentStyle-redTeamTableContainer table tbody tr td:nth-child(n+3), .BattleTabStatisticComponentStyle-dmTableContainer table tbody tr td:nth-child(n+3) {
-    visibility: visible !important;
+    visibility: visible imp;
 }
 
 .BattleTabStatisticComponentStyle-blueTeamTableContainer table thead tr th:nth-child(n+6), .BattleTabStatisticComponentStyle-redTeamTableContainer table thead tr th:nth-child(n+6) {
@@ -1174,8 +1210,8 @@ if ttw {
 /*Forces modules to be always showing in battle*/
 .BattleTabStatisticComponentStyle-resistanceModuleCell {
     min-width: 10em;
-    width: 10em !important;
-    visibility: unset !important;
+    width: 10em imp;
+    visibility: unset imp;
     }
 }
 else { 
@@ -1665,6 +1701,11 @@ url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp);
 }
 .ChatComponentStyle-messagesContainer {
     margin-bottom: 1.5em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+:has(> input[placeholder="Write your message here"]), .ChatComponentStyle-sendButton {
+    height: 5em imp;
+    border-top: 1px solid rgba(255, 255, 255, 0);
 }
 .NewsComponentStyle-closeArea {
     background: linear-gradient(90deg, #ffffff00, rgba(bg, 0.5));
@@ -1736,5 +1777,140 @@ if cnct {
     .ScrollingCardsComponentStyle-scrollCard:first-child {
     margin-left: 0;
     }
+    }
 }
+@-moz-document domain("ratings.tankionline.com") {
+/*Ratings*/
+
+.generic-box.panel.user-info-panel.generic-box.panel.user-info-panel .progress-bar__bar {
+    position: relative;
+}
+
+.generic-box.panel.user-info-panel.generic-box.panel.user-info-panel .progress-bar__bar::after
+{
+    position: absolute;
+    left: 580px;
+    top: 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.125rem;
+    line-height: 1.35;
+    color: white;
+    text-shadow: 1px 1px 3px #000, -1px -1px 3px #000;
+    pointer-events: none;
+}
+/* 0–100% brute force */
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="0%"]::after { content: "0%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="1%"]::after { content: "1%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="2%"]::after { content: "2%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="3%"]::after { content: "3%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="4%"]::after { content: "4%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="5%"]::after { content: "5%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="6%"]::after { content: "6%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="7%"]::after { content: "7%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="8%"]::after { content: "8%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="9%"]::after { content: "9%"; }
+
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="10%"]::after { content: "10%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="11%"]::after { content: "11%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="12%"]::after { content: "12%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="13%"]::after { content: "13%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="14%"]::after { content: "14%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="15%"]::after { content: "15%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="16%"]::after { content: "16%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="17%"]::after { content: "17%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="18%"]::after { content: "18%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="19%"]::after { content: "19%"; }
+
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="20%"]::after { content: "20%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="21%"]::after { content: "21%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="22%"]::after { content: "22%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="23%"]::after { content: "23%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="24%"]::after { content: "24%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="25%"]::after { content: "25%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="26%"]::after { content: "26%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="27%"]::after { content: "27%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="28%"]::after { content: "28%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="29%"]::after { content: "29%"; }
+
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="30%"]::after { content: "30%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="31%"]::after { content: "31%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="32%"]::after { content: "32%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="33%"]::after { content: "33%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="34%"]::after { content: "34%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="35%"]::after { content: "35%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="36%"]::after { content: "36%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="37%"]::after { content: "37%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="38%"]::after { content: "38%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="39%"]::after { content: "39%"; }
+
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="40%"]::after { content: "40%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="41%"]::after { content: "41%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="42%"]::after { content: "42%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="43%"]::after { content: "43%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="44%"]::after { content: "44%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="45%"]::after { content: "45%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="46%"]::after { content: "46%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="47%"]::after { content: "47%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="48%"]::after { content: "48%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="49%"]::after { content: "49%"; }
+
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="50%"]::after { content: "50%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="51%"]::after { content: "51%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="52%"]::after { content: "52%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="53%"]::after { content: "53%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="54%"]::after { content: "54%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="55%"]::after { content: "55%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="56%"]::after { content: "56%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="57%"]::after { content: "57%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="58%"]::after { content: "58%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="59%"]::after { content: "59%"; }
+
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="60%"]::after { content: "60%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="61%"]::after { content: "61%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="62%"]::after { content: "62%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="63%"]::after { content: "63%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="64%"]::after { content: "64%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="65%"]::after { content: "65%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="66%"]::after { content: "66%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="67%"]::after { content: "67%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="68%"]::after { content: "68%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="69%"]::after { content: "69%"; }
+
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="70%"]::after { content: "70%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="71%"]::after { content: "71%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="72%"]::after { content: "72%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="73%"]::after { content: "73%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="74%"]::after { content: "74%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="75%"]::after { content: "75%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="76%"]::after { content: "76%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="77%"]::after { content: "77%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="78%"]::after { content: "78%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="79%"]::after { content: "79%"; }
+
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="80%"]::after { content: "80%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="81%"]::after { content: "81%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="82%"]::after { content: "82%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="83%"]::after { content: "83%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="84%"]::after { content: "84%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="85%"]::after { content: "85%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="86%"]::after { content: "86%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="87%"]::after { content: "87%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="88%"]::after { content: "88%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="89%"]::after { content: "89%"; }
+
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="90%"]::after { content: "90%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="91%"]::after { content: "91%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="92%"]::after { content: "92%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="93%"]::after { content: "93%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="94%"]::after { content: "94%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="95%"]::after { content: "95%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="96%"]::after { content: "96%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="97%"]::after { content: "97%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="98%"]::after { content: "98%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="99%"]::after { content: "99%"; }
+.generic-box.panel.user-info-panel .progress-bar__bar[style*="100%"]::after { content: "100%";}
+
+
+
 }
