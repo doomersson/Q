@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1
+@version        1.1
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -18,6 +18,8 @@
     'Esport': 'esport',
     'Bokeh': 'bokeh'
 }
+
+@var text custom-text "Loading Text" "Borz"
 
 @var select   b3    "▶️ Play Button Gifs"               {'Default*': 'default','Gif 2': 'alt2','Freeze': 'freeze','Ydzero': 'ydzero','Meteor': 'meteor','Matrix': 'matrix','No Gif Dark': 'ngd'}
 
@@ -92,13 +94,30 @@ html {
 .wrapper {
     background: transparent;
 }
+.LobbyLoaderComponentStyle-loaderContainer span {
+    visibility: hidden;
+    position: relative;
+    font-size: 0 !important;
+}
+.LobbyLoaderComponentStyle-loaderContainer span::after {
+    content: "" + custom-text + "";
+    visibility: visible;
+    position: relative;
+    left: 0;
+    bottom: 0px;
+    font-size: 16px;
+    width: max-content;
+    font-family: BaseFontRegular, FallbackFontRegular;
+    font-weight: normal;
+    text-transform: uppercase;
+}
 if load1 {
     .LobbyLoaderComponentStyle-container { 
-    animation: fadeIn 2s ease forwards;
+    animation: fadeIn 1s ease forwards;
     }
     @keyframes fadeIn {
     from { opacity: 0; }
-    to   { opacity: 0.5; }
+    to   { opacity: 0.9; }
     }
 }
 .SaleByKitStyle-commonBlockModal {
@@ -195,6 +214,50 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
     mask-position: center;
     background: acc;
 }
+/*Rank Progress*/
+.UserProgressComponentStyle-progressItemCompleted {
+    background: linear-gradient(rgba(191, 213, 255, 0) 0%, rgba(acc, 0.25) 100%);
+}
+.UserProgressComponentStyle-rankProgressBarGained {
+    border-top: 4px solid acc;
+}
+.UserProgressComponentStyle-rankGainedIndicator {
+    border-left: 1px solid acc;
+}
+.UserProgressComponentStyle-rankScore,.UserProgressComponentStyle-rankProgressLegend {
+    color: acc;
+}
+.UserProgressComponentStyle-progressItemCompleted:hover {
+    box-shadow: acc 0px 0px 0px 2px;
+}
+.UserProgressComponentStyle-progressItemCompleted:hover:active {
+    box-shadow: acc 0px 0px 0px 2px;
+}
+.UserProgressComponentStyle-progressItemCompleted   {
+    box-shadow: rgba(acc, .25) 0px 0px 0px 1px;
+}
+.UserProgressComponentStyle-xpIcon,.BattleResultUserInfoComponentStyle-xp img, .BattleRewardsComponentStyle-normalRow img {
+    mask-image: url("/play/static/images/iconExperiencePremium.31caa4ad.svg");
+    background-image: unset;
+    background-color: acc;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    z-index: 1;
+    width: 18px;
+    margin-right: 4px;
+}
+.UserInfoContainerStyle-containerProgressMainScreen > .Common-flexStartAlignStartColumn {
+    background: rgba(255,255,255,.31);
+    min-width: 10.6em;
+    margin-top: 0.4em;
+    border-radius: 0em;
+}.UserProgressComponentStyle-rankProgressGeneral {
+    color: acc;
+    border-right: 1px solid acc;
+    background: linear-gradient(270deg, rgba(acc, .25) 0%, rgba(118, 255, 51, 0) 100%) right center / auto repeat-y;
+}
+
 
 /*Chat GENERAL/PRO BATTLES*/
 .ChatComponentStyle-channelSelect.-bold.-normal {
@@ -743,7 +806,7 @@ if b2 == "default" {
     background: #0000  imp;
 }
 /*that dumb festive mode button showing a little yellow is now gone*/
-.BattlePickComponentStyle-cardImgEvent.Common-backgroundImageContain.Common-backgroundImage {
+.BattlePickComponentStyle-cardImgEvent.Common-backgroundImageContain.Common-backgroundImage, .BattlePickComponentStyle-cardImgEvent {
    background-size: cover imp;
 }
 /*Bottom right announcement fix*/
