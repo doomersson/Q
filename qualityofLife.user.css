@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.1
+@version        1.1.2
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -236,7 +236,7 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
 .UserProgressComponentStyle-progressItemCompleted   {
     box-shadow: rgba(acc, .25) 0px 0px 0px 1px;
 }
-.UserProgressComponentStyle-xpIcon,.BattleResultUserInfoComponentStyle-xp img, .BattleRewardsComponentStyle-normalRow img {
+.UserProgressComponentStyle-xpIcon {
     mask-image: url("/play/static/images/iconExperiencePremium.31caa4ad.svg");
     background-image: unset;
     background-color: acc;
@@ -1313,192 +1313,111 @@ if XT {
 
 /*hornet*/
 .MountedItemsStyle-itemPreview[src*="/566/70102/323/360/27316026215470/"] {
-    background-image: url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp) no-repeat top / contain;
 }
 /*wasp*/
 .MountedItemsStyle-itemPreview[src*="/574/114025/235/321/27623005403276/"] {
-    background-image: url(https://s.eu.tankionline.com/630/157767/151/316/31433775743511/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/630/157767/151/316/31433775743511/image.webp) no-repeat top / contain;
 }
 /*paladin*/
 .MountedItemsStyle-itemPreview[src*="/573/71447/126/60/27602130071361/"] {
-    background-image: url(https://s.eu.tankionline.com/573/71447/126/37/27602130032301/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/573/71447/126/37/27602130032301/image.webp) no-repeat top / contain;
 }
 /*mammoth*/
 .MountedItemsStyle-itemPreview[src*="/600/67532/1/65/30015726400661/"] {
-    background-image: url(https://s.eu.tankionline.com/617/166341/256/13/30775470330175/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/617/166341/256/13/30775470330175/image.webp) no-repeat top / contain;
 }
 /*hopper*/
 .MountedItemsStyle-itemPreview[src*="/564/5207/367/317/27221401743427/"] {
-    background-image: url(https://s.eu.tankionline.com/564/111272/25/147/27222256430152/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/564/111272/25/147/27222256430152/image.webp) no-repeat top / contain;
 }
 /*hunter*/
 .MountedItemsStyle-itemPreview[src*="/567/167060/364/47/27375614310446/"] {
-    background-image: url(https://s.eu.tankionline.com/632/72364/102/227/31516475423716/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/632/72364/102/227/31516475423716/image.webp) no-repeat top / contain;
 }
 /*viking*/
 .MountedItemsStyle-itemPreview[src*="/571/121327/171/265/27464265736706/"] {
-    background-image: url(https://s.eu.tankionline.com/606/162165/343/3/30334435362646/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/606/162165/343/3/30334435362646/image.webp) no-repeat top / contain;
 }
 /*crusader*/
 .MountedItemsStyle-itemPreview[src*="/566/43504/240/22/27310721145267/"] {
-    background-image: url(https://s.eu.tankionline.com/566/40735/240/67/27310167345113/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/566/40735/240/67/27310167345113/image.webp) no-repeat top / contain;
 }
 /*ares*/
 .MountedItemsStyle-itemPreview[src*="/562/161140/123/251/27157463264311/"] {
-    background-image: url(https://s.eu.tankionline.com/562/161156/242/234/31331074061754/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/562/161156/242/234/31331074061754/image.webp) no-repeat top / contain;
 }
 /*dictator*/
 .MountedItemsStyle-itemPreview[src*="/602/61754/171/47/30114373154622/"] {
-    background-image: url(https://s.eu.tankionline.com/621/140410/154/251/31070103077064/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/621/140410/154/251/31070103077064/image.webp) no-repeat top / contain;
 }
 /*titan*/
 .MountedItemsStyle-itemPreview[src*="/606/26070/125/145/30305416163507/"] {
-    background-image: url(https://s.eu.tankionline.com/612/43367/221/355/30510675712024/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/612/43367/221/355/30510675712024/image.webp) no-repeat top / contain;
 }
 /*shaft*/
 .MountedItemsStyle-itemPreview[src*="/622/43505/151/101/31110721265007/"] {
-    background-image: url("https://s.eu.tankionline.com/622/115027/356/340/31123205770464/image.webp");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("https://s.eu.tankionline.com/622/115027/356/340/31123205770464/image.webp") no-repeat top / contain;
 }
 /*gauss*/
 .MountedItemsStyle-itemPreview[src*="/611/61722/256/267/30454367266373/"] {
-    background-image: url("https://s.eu.tankionline.com/560/166470/223/123/27035516206046/image.webp");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("https://s.eu.tankionline.com/560/166470/223/123/27035516206046/image.webp") no-repeat top / contain;
 }
 /*magnum*/
 .MountedItemsStyle-itemPreview[src*="/632/23036/322/273/31504607631061/"] {
-    background-image: url("https://s.eu.tankionline.com/632/76146/224/361/31517431551253/image.webp");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("https://s.eu.tankionline.com/632/76146/224/361/31517431551253/image.webp") no-repeat top / contain;
 }
 /*thunder*/
 .MountedItemsStyle-itemPreview[src*="/601/112676/250/233/30062557707304/"] {
-    background-image: url(https://s.eu.tankionline.com/617/134472/113/230/30767117003724/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/617/134472/113/230/30767117003724/image.webp) no-repeat top / contain;
 }
 /*striker*/
 .MountedItemsStyle-itemPreview[src*="/626/176502/177/71/31337521147306/"] {
-    background-image: url(https://s.eu.tankionline.com/626/144362/322/210/31331074604612/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/626/144362/322/210/31331074604612/image.webp) no-repeat top / contain;
 }
 /*railgun*/
 .MountedItemsStyle-itemPreview[src*="/567/105205/202/144/27361241363510/"] {
-    background-image: url(https://s.eu.tankionline.com/557/14216/302/47/27006222235365/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/557/14216/302/47/27006222235365/image.webp) no-repeat top / contain;
 }
 /*smoky*/
 .MountedItemsStyle-itemPreview[src*="/566/114246/64/16/27323052543056/"] {
-    background-image: url(https://s.eu.tankionline.com/630/157767/375/215/31435247467005/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/630/157767/375/215/31435247467005/image.webp) no-repeat top / contain;
 }
 /*scorpion*/
 .MountedItemsStyle-itemPreview[src*="/601/17263/233/51/30043654742567/"] {
-    background-image: url(https://s.eu.tankionline.com/602/142236/225/135/30131263063453/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/602/142236/225/135/30131263063453/image.webp) no-repeat top / contain;
 }
 /*twins*/
 .MountedItemsStyle-itemPreview[src*="/575/72153/171/306/27656433310704/"] {
-    background-image: url("https://s.eu.tankionline.com/607/24074/235/2/30345017117777/image.webp");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("https://s.eu.tankionline.com/607/24074/235/2/30345017117777/image.webp") no-repeat top / contain;
 }
 /*hammer*/
 .MountedItemsStyle-itemPreview[src*="/611/147301/37/346/30471660553063/"] {
-    background-image: url(https://s.eu.tankionline.com/627/73466/221/246/31356720510241/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/627/73466/221/246/31356720510241/image.webp) no-repeat top / contain;
 }
 /*tesla*/
 .MountedItemsStyle-itemPreview[src*="/571/164753/344/273/31254566614710/"] {
-    background-image: url(https://s.eu.tankionline.com/571/164753/344/275/27475173126262/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/571/164753/344/275/27475173126262/image.webp) no-repeat top / contain;
 }
 /*isida*/
 .MountedItemsStyle-itemPreview[src*="/605/12650/335/51/30242554322574/"] {
-    background-image: url(https://s.eu.tankionline.com/631/164030/223/154/31475006414111/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/631/164030/223/154/31475006414111/image.webp) no-repeat top / contain;
 }
 /*ricochet*/
 .MountedItemsStyle-itemPreview[src*="/603/146215/116/130/30171443247472/"] {
-    background-image: url("https://s.eu.tankionline.com/577/177107/117/226/27777622231563/image.webp");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("https://s.eu.tankionline.com/577/177107/117/226/27777622231563/image.webp") no-repeat top / contain;
 }
 /*firebird*/
 .MountedItemsStyle-itemPreview[src*="/0/114/134/163/27571212744112/"] {
-    background-image: url(https://s.eu.tankionline.com/574/111735/366/251/27623012454350/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/574/111735/366/251/27623012454350/image.webp) no-repeat top / contain;
 }
 /*freeze*/
 .MountedItemsStyle-itemPreview[src*="/575/156205/46/235/27673441764603/"] {
-    background-image: url(https://s.eu.tankionline.com/607/136170/201/132/30367436101741/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/607/136170/201/132/30367436101741/image.webp) no-repeat top / contain;
 }
 /*vulcan*/
 .MountedItemsStyle-itemPreview[src*="/622/115017/367/224/31123203774154/"] {
-    background-image: url("https://s.eu.tankionline.com/613/14030/7/251/30543006303434/image.webp");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("https://s.eu.tankionline.com/613/14030/7/251/30543006303434/image.webp") no-repeat top / contain;
 }
 .MountedItemsStyle-itemPreview:is(
   [src*="/566/70102/323/360/27316026215470/"],
@@ -1534,196 +1453,112 @@ if XT {
 }
 
 
-
 /*hornet*/
 .GarageItemComponentStyle-mainImg[src*="/566/70102/323/360/27316026215470/"] {
-    background-image: 
-url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/623/132270/76/254/31166456253644/image.webp) no-repeat top / contain;
 }
-/*wasp*/
 .GarageItemComponentStyle-mainImg[src*="/574/114025/235/321/27623005403276/"] {
-    background-image: url(https://s.eu.tankionline.com/630/157767/151/316/31433775743511/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/630/157767/151/316/31433775743511/image.webp) no-repeat top / contain;
 }
 /*paladin*/
 .GarageItemComponentStyle-mainImg[src*="/573/71447/126/60/27602130071361/"] {
-    background-image: url(https://s.eu.tankionline.com/573/71447/126/37/27602130032301/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/573/71447/126/37/27602130032301/image.webp) no-repeat top / contain;
 }
 /*mammoth*/
 .GarageItemComponentStyle-mainImg[src*="/600/67532/1/65/30015726400661/"] {
-    background-image: url(https://s.eu.tankionline.com/617/166341/256/13/30775470330175/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/617/166341/256/13/30775470330175/image.webp) no-repeat top / contain;
 }
 /*hopper*/
 .GarageItemComponentStyle-mainImg[src*="/564/5207/367/317/27221401743427/"] {
-    background-image: url(https://s.eu.tankionline.com/564/111272/25/147/27222256430152/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/564/111272/25/147/27222256430152/image.webp) no-repeat top / contain;
 }
 /*hunter*/
 .GarageItemComponentStyle-mainImg[src*="/567/167060/364/47/27375614310446/"] {
-    background-image: url(https://s.eu.tankionline.com/632/72364/102/227/31516475423716/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/632/72364/102/227/31516475423716/image.webp) no-repeat top / contain;
 }
 /*viking*/
 .GarageItemComponentStyle-mainImg[src*="/571/121327/171/265/27464265736706/"] {
-    background-image: url(https://s.eu.tankionline.com/606/162165/343/3/30334435362646/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/606/162165/343/3/30334435362646/image.webp) no-repeat top / contain;
 }
 /*crusader*/
 .GarageItemComponentStyle-mainImg[src*="/566/43504/240/22/27310721145267/"] {
-    background-image: url(https://s.eu.tankionline.com/566/40735/240/67/27310167345113/image.webp);
-    background-position: top;
-   	background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/566/40735/240/67/27310167345113/image.webp) no-repeat top / contain;
 }
 /*ares*/
 .GarageItemComponentStyle-mainImg[src*="/562/161140/123/251/27157463264311/"] {
-    background-image: url(https://s.eu.tankionline.com/562/161156/242/234/31331074061754/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/562/161156/242/234/31331074061754/image.webp) no-repeat top / contain;
 }
 /*dictator*/
 .GarageItemComponentStyle-mainImg[src*="/602/61754/171/47/30114373154622/"] {
-    background-image: url(https://s.eu.tankionline.com/621/140410/154/251/31070103077064/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/621/140410/154/251/31070103077064/image.webp) no-repeat top / contain;
 }
 /*titan*/
 .GarageItemComponentStyle-mainImg[src*="/606/26070/125/145/30305416163507/"] {
-    background-image: url(https://s.eu.tankionline.com/612/43367/221/355/30510675712024/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/612/43367/221/355/30510675712024/image.webp) no-repeat top / contain;
 }
 /*shaft*/
 .GarageItemComponentStyle-mainImg[src*="/622/43505/151/101/31110721265007/"] {
-    background-image: url("https://s.eu.tankionline.com/622/115027/356/340/31123205770464/image.webp");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("https://s.eu.tankionline.com/622/115027/356/340/31123205770464/image.webp") no-repeat top / contain;
 }
 /*gauss*/
 .GarageItemComponentStyle-mainImg[src*="/611/61722/256/267/30454367266373/"] {
-    background-image: url(https://s.eu.tankionline.com/560/166470/223/123/27035516206046/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/560/166470/223/123/27035516206046/image.webp) no-repeat top / contain;
 }
 /*magnum*/
 .GarageItemComponentStyle-mainImg[src*="/632/23036/322/273/31504607631061/"] {
-    background-image: url("https://s.eu.tankionline.com/632/76146/224/361/31517431551253/image.webp");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("https://s.eu.tankionline.com/632/76146/224/361/31517431551253/image.webp") no-repeat top / contain;
 }
 /*thunder*/
 .GarageItemComponentStyle-mainImg[src*="/601/112676/250/233/30062557707304/"] {
-    background-image: url(https://s.eu.tankionline.com/617/134472/113/230/30767117003724/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/617/134472/113/230/30767117003724/image.webp) no-repeat top / contain;
 }
 /*striker*/
 .GarageItemComponentStyle-mainImg[src*="/626/176502/177/71/31337521147306/"] {
-    background-image: url(https://s.eu.tankionline.com/626/144362/322/210/31331074604612/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/626/144362/322/210/31331074604612/image.webp) no-repeat top / contain;
 }
 /*railgun*/
 .GarageItemComponentStyle-mainImg[src*="/567/105205/202/144/27361241363510/"] {
-    background-image: url(https://s.eu.tankionline.com/557/14216/302/47/27006222235365/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/557/14216/302/47/27006222235365/image.webp) no-repeat top / contain;
 }
 /*smoky*/
 .GarageItemComponentStyle-mainImg[src*="/566/114246/64/16/27323052543056/"] {
-    background-image: url(https://s.eu.tankionline.com/630/157767/375/215/31435247467005/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/630/157767/375/215/31435247467005/image.webp) no-repeat top / contain;
 }
 /*scorpion*/
 .GarageItemComponentStyle-mainImg[src*="/601/17263/233/51/30043654742567/"] {
-    background-image: url(https://s.eu.tankionline.com/602/142236/225/135/30131263063453/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/602/142236/225/135/30131263063453/image.webp) no-repeat top / contain;
 }
 /*twins*/
 .GarageItemComponentStyle-mainImg[src*="/575/72153/171/306/27656433310704/"] {
-    background-image: url("https://s.eu.tankionline.com/607/24074/235/2/30345017117777/image.webp");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("https://s.eu.tankionline.com/607/24074/235/2/30345017117777/image.webp") no-repeat top / contain;
 }
 /*hammer*/
 .GarageItemComponentStyle-mainImg[src*="/611/147301/37/346/30471660553063/"] {
-    background-image: url(https://s.eu.tankionline.com/627/73466/221/246/31356720510241/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/627/73466/221/246/31356720510241/image.webp) no-repeat top / contain;
 }
 /*tesla*/
 .GarageItemComponentStyle-mainImg[src*="/571/164753/344/273/31254566614710/"] {
-    background-image: url(https://s.eu.tankionline.com/571/164753/344/275/27475173126262/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/571/164753/344/275/27475173126262/image.webp) no-repeat top / contain;
 }
 /*isida*/
 .GarageItemComponentStyle-mainImg[src*="/605/12650/335/51/30242554322574/"] {
-    background-image: url(https://s.eu.tankionline.com/631/164030/223/154/31475006414111/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/631/164030/223/154/31475006414111/image.webp) no-repeat top / contain;
 }
 /*ricochet*/
 .GarageItemComponentStyle-mainImg[src*="/603/146215/116/130/30171443247472/"] {
-    background-image: url("https://s.eu.tankionline.com/577/177107/117/226/27777622231563/image.webp");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("https://s.eu.tankionline.com/577/177107/117/226/27777622231563/image.webp") no-repeat top / contain;
 }
 /*firebird*/
 .GarageItemComponentStyle-mainImg[src*="/0/114/134/163/27571212744112/"] {
-    background-image: url(https://s.eu.tankionline.com/574/111735/366/251/27623012454350/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/574/111735/366/251/27623012454350/image.webp) no-repeat top / contain;
 }
 /*freeze*/
 .GarageItemComponentStyle-mainImg[src*="/575/156205/46/235/27673441764603/"] {
-    background-image: url(https://s.eu.tankionline.com/607/136170/201/132/30367436101741/image.webp);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url(https://s.eu.tankionline.com/607/136170/201/132/30367436101741/image.webp) no-repeat top / contain;
 }
 /*vulcan*/
 .GarageItemComponentStyle-mainImg[src*="/622/115017/367/224/31123203774154/"] {
-    background-image: url("https://s.eu.tankionline.com/613/14030/7/251/30543006303434/image.webp");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: url("https://s.eu.tankionline.com/613/14030/7/251/30543006303434/image.webp") no-repeat top / contain;
 }
 .GarageItemComponentStyle-mainImg:is(
   [src*="/566/70102/323/360/27316026215470/"],
@@ -1845,12 +1680,14 @@ if cnct {
 @-moz-document domain("ratings.tankionline.com") {
 /*Ratings*/
 
-.generic-box.panel.user-info-panel.generic-box.panel.user-info-panel .progress-bar__bar {
+uip = '.generic-box.panel.user-info-panel'
+pb = '.progress-bar__bar'
+
+{uip}{uip} {pb} {
     position: relative;
 }
 
-.generic-box.panel.user-info-panel.generic-box.panel.user-info-panel .progress-bar__bar::after
-{
+{uip}{uip} {pb}::after {
     position: absolute;
     left: 580px;
     top: 0px;
@@ -1862,118 +1699,109 @@ if cnct {
     text-shadow: 1px 1px 3px #000, -1px -1px 3px #000;
     pointer-events: none;
 }
+
 /* 0–100% brute force */
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="0%"]::after { content: "0%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="1%"]::after { content: "1%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="2%"]::after { content: "2%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="3%"]::after { content: "3%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="4%"]::after { content: "4%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="5%"]::after { content: "5%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="6%"]::after { content: "6%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="7%"]::after { content: "7%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="8%"]::after { content: "8%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="9%"]::after { content: "9%"; }
-
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="10%"]::after { content: "10%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="11%"]::after { content: "11%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="12%"]::after { content: "12%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="13%"]::after { content: "13%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="14%"]::after { content: "14%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="15%"]::after { content: "15%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="16%"]::after { content: "16%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="17%"]::after { content: "17%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="18%"]::after { content: "18%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="19%"]::after { content: "19%"; }
-
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="20%"]::after { content: "20%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="21%"]::after { content: "21%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="22%"]::after { content: "22%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="23%"]::after { content: "23%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="24%"]::after { content: "24%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="25%"]::after { content: "25%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="26%"]::after { content: "26%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="27%"]::after { content: "27%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="28%"]::after { content: "28%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="29%"]::after { content: "29%"; }
-
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="30%"]::after { content: "30%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="31%"]::after { content: "31%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="32%"]::after { content: "32%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="33%"]::after { content: "33%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="34%"]::after { content: "34%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="35%"]::after { content: "35%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="36%"]::after { content: "36%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="37%"]::after { content: "37%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="38%"]::after { content: "38%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="39%"]::after { content: "39%"; }
-
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="40%"]::after { content: "40%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="41%"]::after { content: "41%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="42%"]::after { content: "42%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="43%"]::after { content: "43%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="44%"]::after { content: "44%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="45%"]::after { content: "45%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="46%"]::after { content: "46%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="47%"]::after { content: "47%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="48%"]::after { content: "48%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="49%"]::after { content: "49%"; }
-
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="50%"]::after { content: "50%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="51%"]::after { content: "51%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="52%"]::after { content: "52%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="53%"]::after { content: "53%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="54%"]::after { content: "54%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="55%"]::after { content: "55%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="56%"]::after { content: "56%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="57%"]::after { content: "57%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="58%"]::after { content: "58%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="59%"]::after { content: "59%"; }
-
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="60%"]::after { content: "60%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="61%"]::after { content: "61%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="62%"]::after { content: "62%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="63%"]::after { content: "63%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="64%"]::after { content: "64%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="65%"]::after { content: "65%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="66%"]::after { content: "66%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="67%"]::after { content: "67%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="68%"]::after { content: "68%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="69%"]::after { content: "69%"; }
-
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="70%"]::after { content: "70%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="71%"]::after { content: "71%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="72%"]::after { content: "72%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="73%"]::after { content: "73%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="74%"]::after { content: "74%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="75%"]::after { content: "75%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="76%"]::after { content: "76%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="77%"]::after { content: "77%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="78%"]::after { content: "78%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="79%"]::after { content: "79%"; }
-
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="80%"]::after { content: "80%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="81%"]::after { content: "81%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="82%"]::after { content: "82%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="83%"]::after { content: "83%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="84%"]::after { content: "84%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="85%"]::after { content: "85%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="86%"]::after { content: "86%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="87%"]::after { content: "87%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="88%"]::after { content: "88%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="89%"]::after { content: "89%"; }
-
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="90%"]::after { content: "90%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="91%"]::after { content: "91%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="92%"]::after { content: "92%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="93%"]::after { content: "93%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="94%"]::after { content: "94%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="95%"]::after { content: "95%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="96%"]::after { content: "96%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="97%"]::after { content: "97%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="98%"]::after { content: "98%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="99%"]::after { content: "99%"; }
-.generic-box.panel.user-info-panel .progress-bar__bar[style*="100%"]::after { content: "100%";}
-
+{uip} {pb}[style*="0%"]::after { content: "0%"; }
+{uip} {pb}[style*="1%"]::after { content: "1%"; }
+{uip} {pb}[style*="2%"]::after { content: "2%"; }
+{uip} {pb}[style*="3%"]::after { content: "3%"; }
+{uip} {pb}[style*="4%"]::after { content: "4%"; }
+{uip} {pb}[style*="5%"]::after { content: "5%"; }
+{uip} {pb}[style*="6%"]::after { content: "6%"; }
+{uip} {pb}[style*="7%"]::after { content: "7%"; }
+{uip} {pb}[style*="8%"]::after { content: "8%"; }
+{uip} {pb}[style*="9%"]::after { content: "9%"; }
+{uip} {pb}[style*="10%"]::after { content: "10%"; }
+{uip} {pb}[style*="11%"]::after { content: "11%"; }
+{uip} {pb}[style*="12%"]::after { content: "12%"; }
+{uip} {pb}[style*="13%"]::after { content: "13%"; }
+{uip} {pb}[style*="14%"]::after { content: "14%"; }
+{uip} {pb}[style*="15%"]::after { content: "15%"; }
+{uip} {pb}[style*="16%"]::after { content: "16%"; }
+{uip} {pb}[style*="17%"]::after { content: "17%"; }
+{uip} {pb}[style*="18%"]::after { content: "18%"; }
+{uip} {pb}[style*="19%"]::after { content: "19%"; }
+{uip} {pb}[style*="20%"]::after { content: "20%"; }
+{uip} {pb}[style*="21%"]::after { content: "21%"; }
+{uip} {pb}[style*="22%"]::after { content: "22%"; }
+{uip} {pb}[style*="23%"]::after { content: "23%"; }
+{uip} {pb}[style*="24%"]::after { content: "24%"; }
+{uip} {pb}[style*="25%"]::after { content: "25%"; }
+{uip} {pb}[style*="26%"]::after { content: "26%"; }
+{uip} {pb}[style*="27%"]::after { content: "27%"; }
+{uip} {pb}[style*="28%"]::after { content: "28%"; }
+{uip} {pb}[style*="29%"]::after { content: "29%"; }
+{uip} {pb}[style*="30%"]::after { content: "30%"; }
+{uip} {pb}[style*="31%"]::after { content: "31%"; }
+{uip} {pb}[style*="32%"]::after { content: "32%"; }
+{uip} {pb}[style*="33%"]::after { content: "33%"; }
+{uip} {pb}[style*="34%"]::after { content: "34%"; }
+{uip} {pb}[style*="35%"]::after { content: "35%"; }
+{uip} {pb}[style*="36%"]::after { content: "36%"; }
+{uip} {pb}[style*="37%"]::after { content: "37%"; }
+{uip} {pb}[style*="38%"]::after { content: "38%"; }
+{uip} {pb}[style*="39%"]::after { content: "39%"; }
+{uip} {pb}[style*="40%"]::after { content: "40%"; }
+{uip} {pb}[style*="41%"]::after { content: "41%"; }
+{uip} {pb}[style*="42%"]::after { content: "42%"; }
+{uip} {pb}[style*="43%"]::after { content: "43%"; }
+{uip} {pb}[style*="44%"]::after { content: "44%"; }
+{uip} {pb}[style*="45%"]::after { content: "45%"; }
+{uip} {pb}[style*="46%"]::after { content: "46%"; }
+{uip} {pb}[style*="47%"]::after { content: "47%"; }
+{uip} {pb}[style*="48%"]::after { content: "48%"; }
+{uip} {pb}[style*="49%"]::after { content: "49%"; }
+{uip} {pb}[style*="50%"]::after { content: "50%"; }
+{uip} {pb}[style*="51%"]::after { content: "51%"; }
+{uip} {pb}[style*="52%"]::after { content: "52%"; }
+{uip} {pb}[style*="53%"]::after { content: "53%"; }
+{uip} {pb}[style*="54%"]::after { content: "54%"; }
+{uip} {pb}[style*="55%"]::after { content: "55%"; }
+{uip} {pb}[style*="56%"]::after { content: "56%"; }
+{uip} {pb}[style*="57%"]::after { content: "57%"; }
+{uip} {pb}[style*="58%"]::after { content: "58%"; }
+{uip} {pb}[style*="59%"]::after { content: "59%"; }
+{uip} {pb}[style*="60%"]::after { content: "60%"; }
+{uip} {pb}[style*="61%"]::after { content: "61%"; }
+{uip} {pb}[style*="62%"]::after { content: "62%"; }
+{uip} {pb}[style*="63%"]::after { content: "63%"; }
+{uip} {pb}[style*="64%"]::after { content: "64%"; }
+{uip} {pb}[style*="65%"]::after { content: "65%"; }
+{uip} {pb}[style*="66%"]::after { content: "66%"; }
+{uip} {pb}[style*="67%"]::after { content: "67%"; }
+{uip} {pb}[style*="68%"]::after { content: "68%"; }
+{uip} {pb}[style*="69%"]::after { content: "69%"; }
+{uip} {pb}[style*="70%"]::after { content: "70%"; }
+{uip} {pb}[style*="71%"]::after { content: "71%"; }
+{uip} {pb}[style*="72%"]::after { content: "72%"; }
+{uip} {pb}[style*="73%"]::after { content: "73%"; }
+{uip} {pb}[style*="74%"]::after { content: "74%"; }
+{uip} {pb}[style*="75%"]::after { content: "75%"; }
+{uip} {pb}[style*="76%"]::after { content: "76%"; }
+{uip} {pb}[style*="77%"]::after { content: "77%"; }
+{uip} {pb}[style*="78%"]::after { content: "78%"; }
+{uip} {pb}[style*="79%"]::after { content: "79%"; }
+{uip} {pb}[style*="80%"]::after { content: "80%"; }
+{uip} {pb}[style*="81%"]::after { content: "81%"; }
+{uip} {pb}[style*="82%"]::after { content: "82%"; }
+{uip} {pb}[style*="83%"]::after { content: "83%"; }
+{uip} {pb}[style*="84%"]::after { content: "84%"; }
+{uip} {pb}[style*="85%"]::after { content: "85%"; }
+{uip} {pb}[style*="86%"]::after { content: "86%"; }
+{uip} {pb}[style*="87%"]::after { content: "87%"; }
+{uip} {pb}[style*="88%"]::after { content: "88%"; }
+{uip} {pb}[style*="89%"]::after { content: "89%"; }
+{uip} {pb}[style*="90%"]::after { content: "90%"; }
+{uip} {pb}[style*="91%"]::after { content: "91%"; }
+{uip} {pb}[style*="92%"]::after { content: "92%"; }
+{uip} {pb}[style*="93%"]::after { content: "93%"; }
+{uip} {pb}[style*="94%"]::after { content: "94%"; }
+{uip} {pb}[style*="95%"]::after { content: "95%"; }
+{uip} {pb}[style*="96%"]::after { content: "96%"; }
+{uip} {pb}[style*="97%"]::after { content: "97%"; }
+{uip} {pb}[style*="98%"]::after { content: "98%"; }
+{uip} {pb}[style*="99%"]::after { content: "99%"; }
+{uip} {pb}[style*="100%"]::after { content: "100%"; }
 
 
 }
