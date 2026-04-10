@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.1.2
+@version        1.1.3
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -630,8 +630,23 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
     border-radius: 0.5em;
     }
 .TankParametersStyle-iconGS, .TankParametersStyle-iconGSSmall {
-    filter: grayscale(1);
+    mask: url(https://s.eu.tankionline.com/static/images/iconGSSmall.0c0aa8fa.svg)  no-repeat top / contain;
+    background: acc;
     }
+.TankParametersStyle-iconGSSmall[src*="https://s.eu.tankionline.com/static/images/iconGSSmall.0c0aa8fa.svg"] {
+    width: 1em;
+}
+.TankParametersStyle-iconGSSmall:is([src*="https://s.eu.tankionline.com/static/images/iconGSSmall.0c0aa8fa.svg"]) {
+    height: 0px;
+    padding: 0.4em;
+}
+.TankParametersStyle-iconGS[src*="https://s.eu.tankionline.com/static/images/iconGS.3d7321c9.svg"] {
+    width: 1em;
+}
+.TankParametersStyle-iconGS:is([src*="https://s.eu.tankionline.com/static/images/iconGS.3d7321c9.svg"]) {
+    height: 0px;
+    padding: 1em;
+}
 .TableMainQuestComponentStyle-cardRewardCompletedTable:hover,.MainQuestComponentStyle-cardRewardCompleted:hover,.ItemDescriptionComponentStyle-blockButtons:hover {
     box-shadow: acc 0px 0px 0px 0.125em;
     }
@@ -752,10 +767,13 @@ if bp1 {
 }
 /*Bottom Right Client Info*/
 if clin {
-.ClientInfoComponentStyle-container {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+    .ClientInfoComponentStyle-container {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .ClientInfoComponentStyle-container:hover {
+      opacity: 1;
+    }
 }
 /*Friend List asset change*/
 if b2 == "person" {
@@ -1160,6 +1178,9 @@ if bR {
 .MainScreenComponentStyle-playButtonContainer:hover {
     border-radius: bor imp;
     }
+}
+
+
 .SkinCellComponentStyle-gradientCategoryDevices-RARE {
     background-image: radial-gradient(100% 100% at 0% 0%, rgb(0, 218, 255) 0%, rgba(0, 218, 255, .32) 5%, rgba(0, 218, 255, .3) 10%, rgba(127, 255, 249, 0) 100%);
     opacity: 1;
@@ -1172,9 +1193,7 @@ if bR {
     background-image: radial-gradient(100% 100% at 0% 0%, rgb(255, 238, 0) 0%, rgba(255, 238, 1, .32) 5%, rgba(255, 238, 0, .3) 10%, rgba(255, 238, 0, 0) 100%);
     opacity: 1;
 }
-}
 /*battle tab*/
-
 .BattleTabStatisticComponentStyle-container>:first-child,
 .BattleTabStatisticComponentStyle-containerInsideTeams, .BattleTabStatisticComponentStyle-container.tt-expanded>.BattleTabStatisticComponentStyle-containerInsideTeams, :is(.BattleTabStatisticComponentStyle-container>:first-child)>.tt-background {
     position: relative imp;
@@ -1801,7 +1820,7 @@ pb = '.progress-bar__bar'
 {uip} {pb}[style*="97%"]::after { content: "97%"; }
 {uip} {pb}[style*="98%"]::after { content: "98%"; }
 {uip} {pb}[style*="99%"]::after { content: "99%"; }
-{uip} {pb}[style*="100%"]::after { content: "100%"; }
+{uip} {pb}[style*="100%"]::after { content: "100%";}
 
 
 }
