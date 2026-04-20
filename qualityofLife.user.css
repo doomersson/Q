@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.1.3
+@version        1.1.4
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -445,7 +445,7 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
 .ContextMenuStyle-menu {
     backdrop-filter: blur(0.125em);
     background-color: rgba(bg , 0.3);
-    box-shadow: acc 0px 0px 0.23em 0px;
+    box-shadow: acc 0px 0px 0.1em 1px;
 }
 .TableMainQuestComponentStyle-cardRewardCompletedTable:active {
     box-shadow: acc 0px 0px 0px 2px;
