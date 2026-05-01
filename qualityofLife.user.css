@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.1.4
+@version        1.1.6
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -18,12 +18,11 @@
     'Esport': 'esport',
     'Bokeh': 'bokeh'
 }
-
+@advanced color bg "Background Color" rgba(32, 48, 64, 1)
 @var text custom-text "Loading Text" "Borz"
 
 @var select   b3    "▶️ Play Button Gifs"               {'Default*': 'default','Gif 2': 'alt2','Freeze': 'freeze','Ydzero': 'ydzero','Meteor': 'meteor','Matrix': 'matrix','No Gif Dark': 'ngd'}
 
-@advanced color bg "Background Color" rgba(32, 48, 64, 1)
 @var checkbox a1    "🔴 Toggle Accents"      1
 @var checkbox fps1  "  FPS and PING accented"    0
 @advanced color acc "  Accents" rgba(203, 172, 123, 1)
@@ -59,7 +58,7 @@
 @var checkbox m3    "🔄 Modules in garage Redesign"       1
 @var checkbox gc1   "2⃣ Garage items in two rows"          1
 @var checkbox m2    "2️⃣ Compact Modules"                  1
-@var checkbox mnz   "🤏 Compact Augment/Skin"             1
+@var checkbox mnz   "🤏 Augment/Skin/Shot Effect reorder"             1
 @var checkbox c1    "🆕 New Clan Page"                    1
 @var checkbox bp1   "⚔️ Larger Battle Picker"             0
 @var checkbox XT    "🏆 Swap garage assets for Skins"     0
@@ -1630,45 +1629,15 @@ if XT {
 
 if mnz {
 /*augment/skin selection minimized*/
-.SkinsComponentStyle-styleColumn {
-    height: 70%;
-    width: 11.75em;
-    margin-right: 1em;
-}
-.SkinCellStyle-widthHeight {
-    width: 11.75em;
-    max-width: 31.75em;
-    min-width: 0em;
-    height: calc(50% - 1em);
-    min-height: calc(43% - 1em);
-    max-height: calc(43% - 1em);
-}
-.SkinCellStyle-widthHeight:hover {
-    width: 11.75em imp;
-    max-width: 31.75em imp;
-    min-width: 0em imp;
-    height: calc(50% - 1em);
-    max-height: calc(43% - 1em);
-    min-height: calc(43% - 1em);    
-}
-.Common-flexCenterAlignCenterColumn.SkinCellStyle-widthHeight:hover {
-    width: 18.75em;
-    max-width: 11.75em;
-    min-width: 11.75em;
-    height: calc(50% - 1em);
-    max-height: calc(43% - 1em);
-    min-height: calc(43% - 1em);
-}
-.SkinsComponentStyle-styleColumn:first-child {
-    margin-left: 2em;
-}
-.SkinCellStyle-iconCell {
-    position: relative;
-    top: 0.5em;
-}
-.SkinCellStyle-nameDevices {
-    top: -0.5em imp;
+.SkinsAndAlterationsStyle-SkinsVerticalComponent {
+    padding-left: 1.2rem;
     }
+    .SkinsAndAlterationsStyle-SkinsVerticalComponent > div:has(.GarageCommonStyle-iconCoinSmall) {
+    order: 998;
+    }
+.SkinsAndAlterationsStyle-SkinsVerticalComponent > div:has(img[src*="unavailable"]) {
+    order: 999;
+}
 }
 /*sales thing*/
 .PrimaryMenuItemComponentStyle-discountNotification {
@@ -1694,7 +1663,7 @@ if cnct {
     .ScrollingCardsComponentStyle-scrollCard:first-child {
     margin-left: 0;
     }
-    }
+  }
 }
 @-moz-document domain("ratings.tankionline.com") {
 /*Ratings*/
