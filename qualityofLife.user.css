@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.1.6
+@version        1.1.7
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -1635,8 +1635,16 @@ if mnz {
     .SkinsAndAlterationsStyle-SkinsVerticalComponent > div:has(.GarageCommonStyle-iconCoinSmall) {
     order: 998;
     }
-.SkinsAndAlterationsStyle-SkinsVerticalComponent > div:has(img[src*="unavailable"]) {
+    .SkinsAndAlterationsStyle-SkinsVerticalComponent > div:has(img[src*="unavailable"]) {
     order: 999;
+    }
+    .SkinsAndAlterationsStyle-SkinsVerticalComponent > div {
+    height: 17.3em imp;
+    width: 13em imp;
+ }
+    .SkinsAndAlterationsStyle-SkinsVerticalComponent {
+    grid-template-columns: repeat(auto-fill,13em) imp;
+    padding-left: 1.5em imp;
 }
 }
 /*sales thing*/
