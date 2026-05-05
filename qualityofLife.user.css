@@ -96,7 +96,7 @@ html {
 .LobbyLoaderComponentStyle-loaderContainer span {
     visibility: hidden;
     position: relative;
-    font-size: 0 !important;
+    font-size: 0 imp;
 }
 .LobbyLoaderComponentStyle-loaderContainer span::after {
     content: "" + custom-text + "";
@@ -286,7 +286,7 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
 /*Settings sliders, mostly copied from NUI+ theme from sn0wcat/yarex*/
 
 input[type="checkbox"]:checked + span {
-    background-color: rgba(acc, 0.25) !important;
+    background-color: rgba(acc, 0.25) imp;
 }
 input[type="checkbox"]:not(:checked) + span {
     background-color: rgba(acc, .05);
@@ -295,13 +295,13 @@ input[type="checkbox"]:not(:checked) + span::before {
     content: "";
     position: relative;
     background-color: #dedede;
-    background-image: unset !important;
+    background-image: unset imp;
     mask: url("https://s.eu.tankionline.com/static/images/incorrectCheck.1918884a.svg") 50% 50% / 100% 100% no-repeat;
 }
 input[type="checkbox"]:checked + span::before {
     content: "";
     position: relative;
-    background-image: unset !important;
+    background-image: unset imp;
     background-color: acc;
     mask: url("https://s.eu.tankionline.com/static/images/correct.afad1b22.svg") 50% 50% / 100% 100% no-repeat;
 }
@@ -1749,7 +1749,7 @@ pb = '.progress-bar__bar'
 
 {uip}{uip} {pb}::after {
     position: absolute;
-    left: 580px;
+    left: 600px;
     top: 0px;
     text-align: center;
     color: #fff;
