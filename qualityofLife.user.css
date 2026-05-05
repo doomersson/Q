@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.1.7
+@version        1.1.8
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -177,6 +177,32 @@ if b1 == "bokeh" {
     mask-image: url("/play/static/images/gradient.a9e5f61b.svg");
     background: bg imp;
 }
+
+/*From NUI+ sn0wcat/yarex*/ 
+for $value in 30..500{
+    .InputRangeComponentStyle-range[value=\'{$value}\'][min='30'][max='500']{
+        --value: $value;
+        --progress: calc(var(--value) / 470 * 100% - 6.5%);}
+    }
+    for $value in 0..100{
+        .InputRangeComponentStyle-range[value=\'{$value}\']{
+            --progress: $value * 1%;
+        }
+        for $max in 3..4{
+            .InputRangeComponentStyle-range[value=\'{$value}\'][max=\'{$max}\']{
+                --max: $max;
+                --value: $value;
+                --progress: calc(var(--value) / var(--max) * 100%);
+            }
+        }
+    }
+}
+for $value in 5..50{
+    .InputRangeComponentStyle-range[value=\'{$value}\'][min='5'][max='50']{
+        --value: $value;
+        --progress: calc((var(--value) - 5) / (100/45) * 4.9%);
+}
+
 /*Main Accents*/
 if a1 {
 ::selection {
@@ -257,7 +283,45 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
     background: linear-gradient(270deg, rgba(acc, .25) 0%, rgba(118, 255, 51, 0) 100%) right center / auto repeat-y;
 }
 
+/*Settings sliders, mostly copied from NUI+ theme from sn0wcat/yarex*/
 
+input[type="checkbox"]:checked + span {
+    background-color: rgba(acc, 0.25) !important;
+}
+input[type="checkbox"]:not(:checked) + span {
+    background-color: rgba(acc, .05);
+}
+input[type="checkbox"]:not(:checked) + span::before {
+    content: "";
+    position: relative;
+    background-color: #dedede;
+    background-image: unset !important;
+    mask: url("https://s.eu.tankionline.com/static/images/incorrectCheck.1918884a.svg") 50% 50% / 100% 100% no-repeat;
+}
+input[type="checkbox"]:checked + span::before {
+    content: "";
+    position: relative;
+    background-image: unset !important;
+    background-color: acc;
+    mask: url("https://s.eu.tankionline.com/static/images/correct.afad1b22.svg") 50% 50% / 100% 100% no-repeat;
+}
+input.InputRangeComponentStyle-range {
+  --progress: 0%;
+  height: 0.5em;
+  border-radius: 0.5em;
+  background: none;
+  margin-inline: 0;
+}
+.InputRangeComponentStyle-range::-webkit-slider-runnable-track {
+  height: 100%;
+  background: linear-gradient(90deg, acc var(--progress), rgba(acc, .25) 0%);
+  border-radius: 1em;
+}
+
+input.InputRangeComponentStyle-range::-webkit-slider-thumb {
+  background: acc;
+  box-shadow: 0 0 0.3126em 0.12504em #223c5033;
+}
 /*Chat GENERAL/PRO BATTLES*/
 .ChatComponentStyle-channelSelect.-bold.-normal {
     background: bg;
