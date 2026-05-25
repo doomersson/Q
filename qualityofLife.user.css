@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.1.8
+@version        1.1.9
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -193,14 +193,14 @@ for $value in 30..500{
                 --max: $max;
                 --value: $value;
                 --progress: calc(var(--value) / var(--max) * 100%);
-            }
-        }
+         }
     }
 }
 for $value in 5..50{
     .InputRangeComponentStyle-range[value=\'{$value}\'][min='5'][max='50']{
         --value: $value;
         --progress: calc((var(--value) - 5) / (100/45) * 4.9%);
+    }
 }
 
 /*Main Accents*/
@@ -304,6 +304,17 @@ input[type="checkbox"]:checked + span::before {
     background-image: unset imp;
     background-color: acc;
     mask: url("https://s.eu.tankionline.com/static/images/correct.afad1b22.svg") 50% 50% / 100% 100% no-repeat;
+}
+.EntranceComponentStyle-checkbox input[type="checkbox"]:checked + span {
+    background-color: rgba(255, 255, 255, 0.1) imp;
+}
+.EntranceComponentStyle-checkbox input[type="checkbox"]:not(:checked) + span {
+    background-color: rgba(255, 255, 255, 0.1) imp;
+}
+.EntranceComponentStyle-checkbox input[type="checkbox"]:checked + span::before {
+    content: "";
+    background-color: unset;
+    background: url("https://s.eu.tankionline.com/static/images/checkMark.fb44274a.svg") 50% 50% / 70% 70% no-repeat imp;
 }
 input.InputRangeComponentStyle-range {
   --progress: 0%;
@@ -1738,7 +1749,14 @@ if cnct {
   }
 }
 @-moz-document domain("ratings.tankionline.com") {
+
 /*Ratings*/
+
+/*Ratings page animations sped up*/
+.user-profile .slider__items-wrapper {
+    -webkit-animation-duration: .1s;
+    animation-duration: 10ms;
+}
 
 uip = '.generic-box.panel.user-info-panel'
 pb = '.progress-bar__bar'
@@ -1755,7 +1773,6 @@ pb = '.progress-bar__bar'
     color: #fff;
     font-size: 1.125rem;
     line-height: 1.35;
-    color: white;
     text-shadow: 1px 1px 3px #000, -1px -1px 3px #000;
     pointer-events: none;
 }
