@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.1.9
+@version        1.2.0
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -1758,6 +1758,9 @@ if cnct {
     animation-duration: 10ms;
 }
 
+.progress-bar__values {
+    width: unset;
+}
 uip = '.generic-box.panel.user-info-panel'
 pb = '.progress-bar__bar'
 
