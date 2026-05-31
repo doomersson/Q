@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.2.0
+@version        1.2.1
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -88,6 +88,18 @@ html {
 .BattleTabStatisticComponentStyle-redTeamTableContainer table tbody {
     --row-background-color: rgba(135, 0, 0, .15) imp;
     --selected-row-background-color: rgba(254, 102, 102, 0.25) imp;
+}
+/*server reset*/
+.ServerHaltAlertComponentStyle-container {
+    background-color: transparent;
+    color: #fff;
+}
+.ServerHaltAlertComponentStyle-timer {
+    color: #ff4d4d;
+    font-size: 40em;
+    pointer-events: none;
+    opacity: 0.4;
+    font-variant-numeric: tabular-nums;
 }
 /*Background*/
 .wrapper {
@@ -1468,6 +1480,10 @@ if XT {
 .MountedItemsStyle-itemPreview[src*="/626/176502/177/71/31337521147306/"] {
     background: url(https://s.eu.tankionline.com/626/144362/322/210/31331074604612/image.webp) no-repeat top / contain;
 }
+/*tsunami*/
+.MountedItemsStyle-itemPreview[src*="633/142777/142/76/31570600103535/"] {
+    background: url(https://s.eu.tankionline.com/635/173643/317/345/31676751003035/image.webp) no-repeat top / contain;
+}
 /*railgun*/
 .MountedItemsStyle-itemPreview[src*="/567/105205/202/144/27361241363510/"] {
     background: url(https://s.eu.tankionline.com/557/14216/302/47/27006222235365/image.webp) no-repeat top / contain;
@@ -1539,7 +1555,8 @@ if XT {
   [src*="/603/146215/116/130/30171443247472/"],
   [src*="/0/114/134/163/27571212744112/"],
   [src*="/575/156205/46/235/27673441764603/"],
-  [src*="/622/115017/367/224/31123203774154/"]) {
+  [src*="/622/115017/367/224/31123203774154/"],
+  [src*="/633/142777/142/76/31570600103535/"]) {
     width: 7em;
     height: 0px;
     padding: 4rem;
@@ -1608,6 +1625,10 @@ if XT {
 /*striker*/
 .GarageItemComponentStyle-mainImg[src*="/626/176502/177/71/31337521147306/"] {
     background: url(https://s.eu.tankionline.com/626/144362/322/210/31331074604612/image.webp) no-repeat top / contain;
+}
+/*tsunami*/
+.GarageItemComponentStyle-mainImg[src*="/633/142777/142/76/31570600103535/"] {
+    background: url(https://s.eu.tankionline.com/635/173643/317/345/31676751003035/image.webp) no-repeat top / contain;
 }
 /*railgun*/
 .GarageItemComponentStyle-mainImg[src*="/567/105205/202/144/27361241363510/"] {
@@ -1680,7 +1701,8 @@ if XT {
   [src*="/603/146215/116/130/30171443247472/"],
   [src*="/0/114/134/163/27571212744112/"],
   [src*="/575/156205/46/235/27673441764603/"],
-  [src*="/622/115017/367/224/31123203774154/"]) {
+  [src*="/622/115017/367/224/31123203774154/"],
+  [src*="/633/142777/142/76/31570600103535/"]) {
     width: 0px;
     height: 0px;
     padding: 5rem;
