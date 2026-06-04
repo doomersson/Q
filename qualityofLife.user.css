@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.2.2
+@version        1.2.3
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -65,6 +65,7 @@
 @var checkbox cnct  "📝 Contract first in mission order"  0
 @var checkbox tpg   "🪟 Garage selection transparent"     0
 @var checkbox load1  "⌛ Loading transparent"             1
+@var checkbox serverreset  "🔄Server Reset Message Redesign"         1
 @var checkbox playt  "PLAY on Play Button is off"         0
 
 ==/UserStyle== */
@@ -89,17 +90,19 @@ html {
     --row-background-color: rgba(135, 0, 0, .15) imp;
     --selected-row-background-color: rgba(254, 102, 102, 0.25) imp;
 }
+if serverreset {
 /*server reset*/
-.ServerHaltAlertComponentStyle-container {
+    .ServerHaltAlertComponentStyle-container {
     background-color: transparent;
     color: #fff;
-}
-.ServerHaltAlertComponentStyle-timer {
+    }
+    .ServerHaltAlertComponentStyle-timer {
     color: #ff4d4d;
     font-size: 40em;
     pointer-events: none;
     opacity: 0.4;
     font-variant-numeric: tabular-nums;
+    }
 }
 /*Background*/
 .wrapper {
