@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.2.3
+@version        1.2.4
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -11,6 +11,7 @@
 @var checkbox ttw    "If using Tanki Tweaks, toggle this off"      1
 @var select b1 'Background' {
     'Default*': 'default',
+    'Custom': 'custom',
     'Linear': 'linear',
     'Radial': 'radial',
     'Matrix': 'matrix',
@@ -18,6 +19,9 @@
     'Esport': 'esport',
     'Bokeh': 'bokeh'
 }
+//from maketankibetter
+@var text customImage 'Code of the custom image\n (maketankibetter.github.io/uri)' 'Paste here'
+
 @advanced color bg "Background Color" rgba(32, 48, 64, 1)
 @var text custom-text "Loading Text" "Borz"
 
@@ -137,6 +141,7 @@ if load1 {
 .SaleByKitStyle-commonBlockModal {
     background: radial-gradient(rgba(bg, 0.9) 0%, #000 100%);
 }
+
 targets = '.-container, .NewsComponentStyle-newsWindow, .ItemDescriptionComponentStyle-commonBlockModal, .UserProgressComponentStyle-modalWrapper, .DialogContainerComponentStyle-container, .LobbyLoaderComponentStyle-container, .NewShopCommonComponentStyle-commonContainer, .ClanInvitationsComponentStyle-invitationContent, .TutorialModalComponentStyle-contentWrapper, .ClanCommonStyle-content'
 
 if b1 == "radial" {
@@ -144,11 +149,13 @@ if b1 == "radial" {
     background: radial-gradient(bg 0%, #000 100%);
   }
 }
+
 if b1 == "linear" {
   {targets} {
     background: linear-gradient(360deg, bg, #000);
   }
 }
+
 if b1 == "matrix" {
   {targets} {
     background-image: linear-gradient(#00000070 0%, bg 100%), url(https://tankionline.com/play/static/images/legendPlusBg.295a98bb.gif);
@@ -158,6 +165,7 @@ if b1 == "matrix" {
     background-position: center;
   }
 }
+
 if b1 == "sparks" {
   {targets} {
     background-image: url(/play/static/images/sparks.990b5664.webp);
@@ -166,6 +174,7 @@ if b1 == "sparks" {
     background-position: bottom;
   }
 }
+
 if b1 == "esport" {
   {targets} {
     background-image: url(https://pages.tankionline.com/images/summer-major/YhQ1TGYJXrSigrjLSuuO/background.jpg);
@@ -173,10 +182,12 @@ if b1 == "esport" {
     background-repeat: no-repeat;
     background-position: bottom;
   }
+
   .LobbyLoaderComponentStyle-container {
     opacity: 0.9;
   }
 }
+
 if b1 == "bokeh" {
   {targets} {
     background-image: linear-gradient(rgba(bg) 0%, transparent 100%), url(https://pages.tankionline.com/images/special-offers/advent-main-bg.jpg) imp;
@@ -186,6 +197,29 @@ if b1 == "bokeh" {
   }
 }
 
+/* Custom image background - ONLY .-container */
+if b1 == "custom" {
+
+  if customImage != "Paste here" {
+    body {
+      --image: url(customImage) !important;
+    }
+  }
+    .-container{
+    background: transparent;
+    }
+  .-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.5) blur(1px);
+
+  }
+}
 
 /*Shop*/
 .NewShopCommonComponentStyle-gradient {
@@ -1778,7 +1812,8 @@ if cnct {
 /*Ratings*/
 
 /*Ratings page animations sped up*/
-.user-profile .slider__items-wrapper {
+.user-profile .slider__items-wrapper,
+.leaderboards .slider__items-wrapper {
     -webkit-animation-duration: .1s;
     animation-duration: 10ms;
 }
