@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.2.4
+@version        1.2.5
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -205,10 +205,10 @@ if b1 == "custom" {
       --image: url(customImage) !important;
     }
   }
-    .-container{
-    background: transparent;
+    .-container {
+    background: black;
     }
-  .-container::before {
+    .-container::before, .LobbyLoaderComponentStyle-container {
     content: '';
     position: absolute;
     inset: 0;
@@ -216,11 +216,13 @@ if b1 == "custom" {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    filter: brightness(0.5) blur(1px);
+    filter: brightness(0.5);
 
   }
 }
-
+.QuestsComponentStyle-scrollBlock, .BattleKillBoardComponentStyle-tableContainer.tt-extended .tt-player-details {
+    z-index: 1;
+}
 /*Shop*/
 .NewShopCommonComponentStyle-gradient {
     mask-image: url("/play/static/images/gradient.a9e5f61b.svg");
