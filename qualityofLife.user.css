@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.2.6
+@version        1.2.7
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -21,7 +21,10 @@
 }
 //from maketankibetter
 @var text customImage 'Code of the custom image\n (maketankibetter.github.io/uri)' 'Paste here'
-
+@var select font-choice "Font" {
+  "Default": "default",
+  "Gyeonggi Millennium": "GyeonggiMillenniumTitle"
+}
 @advanced color bg "Background Color" rgba(32, 48, 64, 1)
 @var text custom-text "Loading Text" "Borz"
 
@@ -1811,6 +1814,38 @@ if cnct {
     margin-left: 0;
     }
   }
+
+
+if font-choice != "default" {
+  @font-face {
+    font-family: 'GyeonggiMillenniumTitle';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Title_Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GyeonggiMillenniumTitle';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Title_Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GyeonggiMillenniumTitle';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/Title_Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'GyeonggiMillenniumTitle';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-3@1.0/TitleV.woff') format('woff');
+    font-weight: 800;
+    font-display: swap;
+  }
+
+  * {
+    font-family: unquote('"' + font-choice + '"'), sans-serif imp;
+  }
+}
 }
 @-moz-document domain("ratings.tankionline.com") {
 
