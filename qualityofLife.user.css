@@ -1,7 +1,7 @@
     /* ==UserStyle==
 @name           Tanki Online Quality of Life Theme
 @namespace      github.com/openstyles/stylus
-@version        1.2.7
+@version        1.2.9
 @description    Quality of Life updates with detailed customization.
 @updateURL      https://github.com/doomersson/Q/raw/refs/heads/main/qualityofLife.user.css
 @author         Borz
@@ -342,7 +342,7 @@ img[src="https://s.eu.tankionline.com/static/images/experience.402435da.svg"]{
 
 /*Settings sliders, mostly copied from NUI+ theme from sn0wcat/yarex*/
 
-input[type="checkbox"]:checked + span {
+input[type="checkbox"]:checked + span, .tt-checked:is(.tt-settings-containter>.tt-checkbox-setting) .tt-checkbox  {
     background-color: rgba(acc, 0.25) imp;
 }
 input[type="checkbox"]:not(:checked) + span {
@@ -355,11 +355,11 @@ input[type="checkbox"]:not(:checked) + span::before {
     background-image: unset imp;
     mask: url("https://s.eu.tankionline.com/static/images/incorrectCheck.1918884a.svg") 50% 50% / 100% 100% no-repeat;
 }
-input[type="checkbox"]:checked + span::before {
+input[type="checkbox"]:checked + span::before, :is(.tt-checked:is(.tt-settings-containter>.tt-checkbox-setting) .tt-checkbox):before {
     content: "";
     position: relative;
     background-image: unset imp;
-    background-color: acc;
+    background-color: acc imp;
     mask: url("https://s.eu.tankionline.com/static/images/correct.afad1b22.svg") 50% 50% / 100% 100% no-repeat;
 }
 .EntranceComponentStyle-checkbox input[type="checkbox"]:checked + span {
@@ -382,12 +382,12 @@ input.InputRangeComponentStyle-range {
 }
 .InputRangeComponentStyle-range::-webkit-slider-runnable-track {
   height: 100%;
-  background: linear-gradient(90deg, acc var(--progress), rgba(acc, .25) 0%);
+  background: linear-gradient(90deg, acc var(--progress), rgba(acc, .25) 0%) imp;
   border-radius: 1em;
 }
 
 input.InputRangeComponentStyle-range::-webkit-slider-thumb {
-  background: acc;
+  background: acc imp;
   box-shadow: 0 0 0.3126em 0.12504em #223c5033;
 }
 /*Chat GENERAL/PRO BATTLES*/
@@ -1060,7 +1060,7 @@ if c1 {
     scrollbar-width: thin;
 }
 if ttw {
-/*script from "Tanki Tweaks" Niced!*/
+/*script from "Tanki Tweaks" Niced*/
 .BattleKillBoardComponentStyle-tableContainer table thead:has(+ tbody #teamRowSpace) {
     filter: drop-shadow(50.5em 0px 0px white);
 }
@@ -1573,7 +1573,49 @@ if XT {
 .MountedItemsStyle-itemPreview[src*="/622/115017/367/224/31123203774154/"] {
     background: url("https://s.eu.tankionline.com/613/14030/7/251/30543006303434/image.webp") no-repeat top / contain;
 }
+
+/*brutus*/
+.MountedItemsStyle-itemPreview[src*="/553/11117/5/346/27006221750136/"] {
+    background: url("https://s.eu.tankionline.com/576/176766/44/51/27740117117516/image.webp") no-repeat top / contain;
+}
+
+/*crisis*/
+.MountedItemsStyle-itemPreview[src*="/562/50132/163/114/27112026542552/"] {
+    background: url("https://s.eu.tankionline.com/576/176767/70/330/27740117121306/image.webp") no-repeat top / contain;
+}
+
+/*hyperion*/
+.MountedItemsStyle-itemPreview[src*="/556/126336/65/363/27006221224752/"] {
+    background: url("https://s.eu.tankionline.com/576/177003/73/67/27740117124750/image.webp") no-repeat top / contain;
+}
+
+/*mechanic*/
+.MountedItemsStyle-itemPreview[src*="/543/130431/306/142/27006221447003/"] {
+    background: url("https://s.eu.tankionline.com/576/177004/4/40/27740117126544/image.webp") no-repeat top / contain;
+}
+
+/*booster*/
+.MountedItemsStyle-itemPreview[src*="/546/7646/23/57/27006221365647/"] {
+    background: url("https://s.eu.tankionline.com/576/176771/123/145/27740117116534/image.webp") no-repeat top / contain;
+}
+
+/*defender*/
+.MountedItemsStyle-itemPreview[src*="/546/7655/210/24/27006221276075/"] {
+    background: url("https://s.eu.tankionline.com/576/176772/236/34/27740117122212/image.webp") no-repeat top / contain;
+}
+
+/*trickster*/
+.MountedItemsStyle-itemPreview[src*="/546/63741/312/327/27006222525254/"] {
+    background: url("https://s.eu.tankionline.com/576/177006/133/160/27740117133025/image.webp") no-repeat top / contain;
+}
+
+/*sabotuer*/
+.MountedItemsStyle-itemPreview[src*="/546/63741/324/26/27006221601376/"] {
+    background: url("https://s.eu.tankionline.com/576/177001/255/262/27740117130352/image.webp") no-repeat top / contain;
+}
+
 .MountedItemsStyle-itemPreview:is(
+  [src*="/553/11117/5/346/27006221750136/"],
   [src*="/566/70102/323/360/27316026215470/"],
   [src*="/574/114025/235/321/27623005403276/"],
   [src*="/573/71447/126/60/27602130071361/"],
@@ -1601,7 +1643,15 @@ if XT {
   [src*="/0/114/134/163/27571212744112/"],
   [src*="/575/156205/46/235/27673441764603/"],
   [src*="/622/115017/367/224/31123203774154/"],
-  [src*="/633/142777/142/76/31570600103535/"]) {
+  [src*="/633/142777/142/76/31570600103535/"],
+  [src*="/562/50132/163/114/27112026542552/"],
+  [src*="/556/126336/65/363/27006221224752/"],
+  [src*="/543/130431/306/142/27006221447003/"],
+  [src*="/546/7646/23/57/27006221365647/"],
+  [src*="/546/7655/210/24/27006221276075/"],
+  [src*="/546/63741/312/327/27006222525254/"],
+  [src*="/546/63741/324/26/27006221601376/"]
+) {
     width: 7em;
     height: 0px;
     padding: 4rem;
@@ -1719,7 +1769,48 @@ if XT {
 .GarageItemComponentStyle-mainImg[src*="/622/115017/367/224/31123203774154/"] {
     background: url("https://s.eu.tankionline.com/613/14030/7/251/30543006303434/image.webp") no-repeat top / contain;
 }
+/*brutus*/
+.GarageItemComponentStyle-mainImg[src*="/553/11117/5/346/27006221750136/"] {
+    background: url("https://s.eu.tankionline.com/576/176766/44/51/27740117117516/image.webp") no-repeat top / contain;
+}
+
+/*crisis*/
+.GarageItemComponentStyle-mainImg[src*="/562/50132/163/114/27112026542552/"] {
+    background: url("https://s.eu.tankionline.com/576/176767/70/330/27740117121306/image.webp") no-repeat top / contain;
+}
+
+/*hyperion*/
+.GarageItemComponentStyle-mainImg[src*="/556/126336/65/363/27006221224752/"] {
+    background: url("https://s.eu.tankionline.com/576/177003/73/67/27740117124750/image.webp") no-repeat top / contain;
+}
+
+/*mechanic*/
+.GarageItemComponentStyle-mainImg[src*="/543/130431/306/142/27006221447003/"] {
+    background: url("https://s.eu.tankionline.com/576/177004/4/40/27740117126544/image.webp") no-repeat top / contain;
+}
+
+/*booster*/
+.GarageItemComponentStyle-mainImg[src*="/546/7646/23/57/27006221365647/"] {
+    background: url("https://s.eu.tankionline.com/576/176771/123/145/27740117116534/image.webp") no-repeat top / contain;
+}
+
+/*defender*/
+.GarageItemComponentStyle-mainImg[src*="/546/7655/210/24/27006221276075/"] {
+    background: url("https://s.eu.tankionline.com/576/176772/236/34/27740117122212/image.webp") no-repeat top / contain;
+}
+
+/*trickster*/
+.GarageItemComponentStyle-mainImg[src*="/546/63741/312/327/27006222525254/"] {
+    background: url("https://s.eu.tankionline.com/576/177006/133/160/27740117133025/image.webp") no-repeat top / contain;
+}
+
+/*sabotuer*/
+.GarageItemComponentStyle-mainImg[src*="/546/63741/324/26/27006221601376/"] {
+    background: url("https://s.eu.tankionline.com/576/177001/255/262/27740117130352/image.webp") no-repeat top / contain;
+}
+
 .GarageItemComponentStyle-mainImg:is(
+  [src*="/553/11117/5/346/27006221750136/"],
   [src*="/566/70102/323/360/27316026215470/"],
   [src*="/574/114025/235/321/27623005403276/"],
   [src*="/573/71447/126/60/27602130071361/"],
@@ -1747,11 +1838,20 @@ if XT {
   [src*="/0/114/134/163/27571212744112/"],
   [src*="/575/156205/46/235/27673441764603/"],
   [src*="/622/115017/367/224/31123203774154/"],
-  [src*="/633/142777/142/76/31570600103535/"]) {
+  [src*="/633/142777/142/76/31570600103535/"],
+  [src*="/562/50132/163/114/27112026542552/"],
+  [src*="/556/126336/65/363/27006221224752/"],
+  [src*="/543/130431/306/142/27006221447003/"],
+  [src*="/546/7646/23/57/27006221365647/"],
+  [src*="/546/7655/210/24/27006221276075/"],
+  [src*="/546/63741/312/327/27006222525254/"],
+  [src*="/546/63741/324/26/27006221601376/"]
+) {
     width: 0px;
     height: 0px;
     padding: 5rem;
-    }
+}
+
 }
 /*chat*/
 .ChatComponentStyle-closeArea {
